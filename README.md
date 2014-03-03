@@ -21,9 +21,9 @@ Locally
 ----
 If you tests are written correctly and UnitTesting is installed, you can trigger UnitTesting via the command palette.
 
-<img src='https://raw.github.com/randy3k/UnitTesting-example/fig/cp.png' width='300'></img>
+<img src='https://raw.github.com/randy3k/UnitTesting-example/fig/cp.png' width='500'></img>
 
-<img src='https://raw.github.com/randy3k/UnitTesting-example/fig/op.png' width='300'></img>
+<img src='https://raw.github.com/randy3k/UnitTesting-example/fig/op.png' width='500'></img>
 
 Travis
 ---
