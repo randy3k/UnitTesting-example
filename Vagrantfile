@@ -12,14 +12,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     config.vm.define "st2" do |st2|
         st2.vm.provision "shell" do |s| 
-            s.path = "sbin/vagrantup.sh"
+            s.path = "vagrantup.sh"
             s.args = ["2", PACKAGE]
         end
     end
 
     config.vm.define "st3" do |st3|
         st3.vm.provision "shell" do |s| 
-            s.path = "sbin/vagrantup.sh"
+            s.path = "vagrantup.sh"
             s.args = ["3", PACKAGE]
         end
     end  
