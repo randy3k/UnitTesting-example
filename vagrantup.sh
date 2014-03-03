@@ -7,16 +7,17 @@ export STP=/home/vagrant/.config/sublime-text-$SUBLIME_TEXT_VERSION/Packages
 
 if [ -z $(which subl) ]; then
     echo apt-get installing
-    sudo apt-get install python-software-properties -y
     if [ $SUBLIME_TEXT_VERSION -eq 2 ]; then
         echo installing sublime 2
         sudo add-apt-repository ppa:webupd8team/sublime-text-2 -y
         sudo apt-get update
+        sudo apt-get install python-software-properties -y
         sudo apt-get install sublime-text -y
     elif [ $SUBLIME_TEXT_VERSION -eq 3 ]; then
         echo installing sublime 3
         sudo add-apt-repository ppa:webupd8team/sublime-text-3 -y
         sudo apt-get update
+        sudo apt-get install python-software-properties -y
         sudo apt-get install sublime-text-installer -y
     fi
     sudo apt-get install git -y
@@ -40,6 +41,6 @@ fi
 if [ ! -f /etc/init.d/xvfb ]; then
     echo installing xvfb controller
     curl https://gist.githubusercontent.com/randy3k/9225319/raw/dee3521ed340bcb99ad721ae9f36e6c4b0a225de/xvfb | sudo tee /etc/init.d/xvfb > /dev/null
-    sudo chmod +x /etc/init.d/xvfb
+    chmod +x /etc/init.d/xvfb
 fi
 sudo /etc/init.d/xvfb start
