@@ -28,6 +28,6 @@ if [ ! -d $STP/$PACKAGE ]; then
 fi
 
 if [ ! -d $STP/UnitTesting ]; then
-    echo download UnitTesting 0.1.0
-    git clone --branch 0.1.0 https://github.com/randy3k/UnitTesting $STP/UnitTesting
+    echo download UnitTesting 0.1.1
+    git clone --branch 0.1.1 https://github.com/randy3k/UnitTesting $STP/UnitTesting
 fi
