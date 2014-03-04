@@ -2,12 +2,12 @@
 # in ST2, tests are imported as package module by unittest.TestLoader.loadTestsFromModule
 # this file is only required under 2 conditions,
 # 1) if your package supports ST2;
-# 2) if you want the tests could be reloaded in the run time of ST (eg, when you are editing the tests)
+# 2) or if you want the tests could be reloaded in the run time of ST (will be useful when you are editing the tests)
 
 import imp
 # make sure newest version of the module is loaded
-from . import test_hw
-imp.reload(test_hw)
+from . import test
+imp.reload(test)
 
 # load testcases
-from .test_hw import *
+from .test import *
