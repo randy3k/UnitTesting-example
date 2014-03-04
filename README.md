@@ -12,9 +12,6 @@ Preparation
 3. Your package! In our case, it is [helloworld.py](https://github.com/randy3k/UnitTesting-example/blob/master/helloworld.py)
 
 
-Note: in the moment of writing this document, it is not yet available in Package Control.
-
-
 
 
 Locally
@@ -29,7 +26,7 @@ Travis
 ---
 If you tests can be run locally, it's time to put them to travis-ci and let travis-ci takes care about the tests. There are two important files, [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) and [travis.sh](https://github.com/randy3k/UnitTesting-example/blob/master/travis.sh), which you need to copy to your package. You will have to edit [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) and change the env variable `PACKAGE` to the name of your package.
 
-Then you need to login to [travis-ci](https://travis-ci.org) to enable travis-ci for your repo. 
+Don't forget to login to [travis-ci](https://travis-ci.org) to enable travis-ci for your repo. 
 
 Vagrant
 ---
