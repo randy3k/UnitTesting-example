@@ -47,3 +47,5 @@ if ! grep DISPLAY /etc/environment > /dev/null; then
     echo "DISPLAY=$DISPLAY" >> /etc/environment
 fi
 /etc/init.d/xvfb start
+
+chown vagrant -R /home/vagrant/.config
