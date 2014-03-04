@@ -45,5 +45,6 @@ vagrant up st3 --provision
 vagrant ssh st3
 # if st2, change to sublime-text-2
 sudo python ~/.config/sublime-text-3/Packages/UnitTesting/sbin/run_scheduler.py UnitTesting-example
-
+# after done, kill sublime
+sudo killall sublime_text
 ```
