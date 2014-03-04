@@ -28,6 +28,7 @@ if [ ! -d $STP/$PACKAGE ]; then
 fi
 
 if [ ! -d $STP/UnitTesting ]; then
-    echo download UnitTesting 0.1.1
-    git clone --branch 0.1.1 https://github.com/randy3k/UnitTesting $STP/UnitTesting
+    echo download latest UnitTesting release
+    LAST=`git ls-remote --tags https://github.com/randy3k/UnitTesting | sed 's|.*/\([^/]*$\)|\1|' | sort -r | head -1`
+    git clone --branch $LAST https://github.com/randy3k/UnitTesting $STP/UnitTesting
 fi
