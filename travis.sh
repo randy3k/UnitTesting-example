@@ -26,5 +26,5 @@ if [ ! -d $STP/$PACKAGE ]; then
 fi
 
 if [ ! -d $STP/UnitTesting ]; then
-    git clone https://github.com/randy3k/UnitTesting $STP/UnitTesting
+    git clone --branch 0.1.0 https://github.com/randy3k/UnitTesting $STP/UnitTesting
 fi
