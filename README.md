@@ -19,7 +19,7 @@ Note: in the moment of writing this document, it is not yet available in Package
 
 Locally
 ----
-If you tests are written correctly and UnitTesting is installed, you can trigger UnitTesting via the command palette.
+If you tests are written correctly and UnitTesting is installed, you can trigger UnitTesting via the command palette. Then in the input panel type: `UnitTesting-example`
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/cp.png' width='500'></img>
 
