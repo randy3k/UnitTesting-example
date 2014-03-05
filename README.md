@@ -28,13 +28,14 @@ If you tests are written correctly and UnitTesting is installed, you can trigger
 
 Travis
 ---
-If you tests can be run locally, it's time to put them to travis-ci and let travis-ci takes care the rest. You have to copy two important files, [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) and [travis.sh](https://github.com/randy3k/UnitTesting-example/blob/master/travis.sh) to your repo. Also change the env variable `PACKAGE` in [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) to the name of your package.
+If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care them. First, you have to copy two important files, [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) and [travis.sh](https://github.com/randy3k/UnitTesting-example/blob/master/travis.sh) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) to the name of your package.
 
 Don't forget to login to [travis-ci](https://travis-ci.org) to enable travis-ci for your repo. 
+Finally, push to github and wait..
 
 Vagrant
 ---
-Debugging in travis-ci could be difficult. To mock the travis-ci environment in your computer, you can use [vagrant](http://www.vagrantup.com). 
+Debugging in travis-ci could be difficult. To mock the travis-ci environment in your computer, you can use [vagrant](http://www.vagrantup.com). You can safely ignore this section if your travis-ci builds are good.
 
 
 ```
