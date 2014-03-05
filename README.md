@@ -7,7 +7,11 @@ This is an getting start example on using [UnitTesting](https://github.com/randy
 Preparation
 ---
 1. Before to test anything, you have to install [UnitTesting](https://github.com/randy3k/UnitTesting) via Package Control or clone it from [source](https://github.com/randy3k/UnitTesting).
-2. You also have to know how to write unittest testcases. Make sure you read the correct correspondence. ST2 developers should read [this](http://docs.python.org/2.6/library/unittest.html) and ST3 developers should read [this](http://docs.python.org/3.3/library/unittest.html). This is specially important if your sublime package supports both ST2 and ST3. You may also want to look that the file [test.py](https://github.com/randy3k/UnitTesting-example/blob/master/tests/test.py) under the `tests` directory for the minimal example.
+2. You also have to know how to write unittest testcases. TestCases should be placed in `test*.py` under the directory `tests`.
+    - ST2 developers should read [this](http://docs.python.org/2.6/library/unittest.html) 
+    - ST3 developers should read [this](http://docs.python.org/3.3/library/unittest.html). 
+    - This is specially important if your sublime package supports both ST2 and ST3. 
+    - You may also want to look that the file [test.py](https://github.com/randy3k/UnitTesting-example/blob/master/tests/test.py) under the `tests` directory for the minimal example.
 
 3. Your package! In our case, it is [helloworld.py](https://github.com/randy3k/UnitTesting-example/blob/master/helloworld.py)
 
