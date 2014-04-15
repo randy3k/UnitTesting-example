@@ -38,7 +38,7 @@ Finally, push to github and wait..
 Debugging in travis-ci could be difficult. To mock the travis-ci environment in your computer, you can use [vagrant](http://www.vagrantup.com). You can safely ignore this section if your travis-ci builds are good.
 
 
-```
+
 # clone the example (not necessary in your sublime packages directory)
 git clone https://github.com/randy3k/UnitTesting-example
 cd UnitTesting-example
@@ -46,7 +46,7 @@ cd UnitTesting-example
 vagrant up st3 --provision
 vagrant ssh st3
 # if st2, change to sublime-text-2
-python ~/.config/sublime-text-3/Packages/UnitTesting/sbin/run_scheduler.py UnitTesting-example
+python ~/.config/sublime-text-3/Packages/UnitTesting/sbin/run.py UnitTesting-example
 # after done, kill sublime
 killall sublime_text
-```
+
