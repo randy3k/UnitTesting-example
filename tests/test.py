@@ -10,7 +10,7 @@ else:
     # st3
    helloworld =  sys.modules["UnitTesting-example.helloworld"]
 
-class TestHelloWorld(TestCase):
+class test_helloworld_command(TestCase):
 
     def setUp(self):
         self.view = sublime.active_window().new_file()
@@ -31,6 +31,8 @@ class TestHelloWorld(TestCase):
         self.view.run_command("hello_world")
         first_row = self.view.substr(self.view.line(0))
         self.assertEqual(first_row,"hello world")
+
+class test_internal_functions(TestCase):
 
     def test_foo(self):
         x = helloworld.foo(1)
