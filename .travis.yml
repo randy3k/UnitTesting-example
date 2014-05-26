@@ -10,6 +10,9 @@ env:
         - SUBLIME_TEXT_VERSION="2"
         - SUBLIME_TEXT_VERSION="3"
 
+before_install:
+    - curl -OL https://raw.githubusercontent.com/randy3k/UnitTesting/master/travis.sh
+
 install:
     - sh -e travis.sh $SUBLIME_TEXT_VERSION $PACKAGE
 

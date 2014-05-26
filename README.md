@@ -28,7 +28,7 @@ If you tests are written correctly and UnitTesting is installed, you can trigger
 
 ###Travis
 
-If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care them. First, you have to copy two important files, [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) (caution: with a beginning dot) and [travis.sh](https://github.com/randy3k/UnitTesting-example/blob/master/travis.sh) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) to the name of your package.
+If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care them. First, you have to copy a important file: [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) (caution: with a beginning dot) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) to the name of your package.
 
 Don't forget to login to [travis-ci](https://travis-ci.org) to enable travis-ci for your repo. 
 Finally, push to github and wait..
