@@ -30,6 +30,6 @@ fi
 if [ ! -d $STP/UnitTesting ]; then
     echo download latest UnitTesting release
     # for stability, you may consider a fixed version of UnitTesting, eg TAG=0.1.4
-    TAG=`git ls-remote --tags https://github.com/randy3k/UnitTesting | sed 's|.*/\([^/]*$\)|\1|' | sort -r | head -1`
+    TAG=`git ls-remote --tags https://github.com/randy3k/UnitTesting | sed 's|.*/\([^/]*$\)|\1|' | sort -r -t . -n | head -1`
     git clone --branch $TAG https://github.com/randy3k/UnitTesting $STP/UnitTesting
 fi
