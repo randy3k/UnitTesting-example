@@ -20,15 +20,17 @@ Running Tests
 
 ###Locally
 
-If you tests are written correctly and UnitTesting is installed, you can trigger UnitTesting via the command palette. Then in the input panel type your package name, in our case, `UnitTesting-example`.
+If the tests are written correctly and UnitTesting is installed, UnitTesting can be triggered via the command palette.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/cp.png' width='500'></img>
+
+Then in the input panel type your package name, in our case, `UnitTesting-example`.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/op.png' width='500'></img>
 
 ###Travis
 
-If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care them. First, you have to copy a important file: [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) (caution: with a beginning dot) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) to the name of your package.
+If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care of them. First, you have to copy a important file: [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) (caution: with a beginning dot) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) to the name of your package.
 
 Don't forget to login to [travis-ci](https://travis-ci.org) to enable travis-ci for your repo. 
 Finally, push to github and wait..
