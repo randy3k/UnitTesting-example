@@ -39,7 +39,7 @@ fi
 
 if [ ! -f /etc/init.d/xvfb ]; then
     echo installing xvfb controller
-    curl https://gist.githubusercontent.com/randy3k/9337122/raw/dee3521ed340bcb99ad721ae9f36e6c4b0a225de/xvfb | sudo tee /etc/init.d/xvfb > /dev/null
+    curl https://gist.githubusercontent.com/randy3k/9337122/raw/xvfb | sudo tee /etc/init.d/xvfb > /dev/null
     chmod +x /etc/init.d/xvfb
 fi
 export DISPLAY=:1
