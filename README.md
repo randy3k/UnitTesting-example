@@ -6,7 +6,7 @@ This is an getting start example on using [UnitTesting](https://github.com/randy
 
 Preparation
 ---
-1. Before to test anything, you have to install [UnitTesting](https://github.com/randy3k/UnitTesting) via Package Control or clone it from [source](https://github.com/randy3k/UnitTesting).
+1. Before testing anything, you have to install [UnitTesting](https://github.com/randy3k/UnitTesting) via Package Control or clone it from [source](https://github.com/randy3k/UnitTesting).
 2. Your package! In our case, it is [helloworld.py](https://github.com/randy3k/UnitTesting-example/blob/master/helloworld.py)
 3. You also have to know how to write unittest testcases. TestCases should be placed in `test*.py` under the directory `tests`. They are loaded by a modified [TestLoader](https://github.com/randy3k/UnitTesting/blob/master/loader.py).
     - ST2 developers should read [this](http://docs.python.org/2.6/library/unittest.html) for unittest documentation.
@@ -32,12 +32,12 @@ Then in the input panel type your package name, in our case, `UnitTesting-exampl
 
 If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care of them. First, you have to copy a important file: [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) (caution: with a beginning dot) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) to the name of your package.
 
-Don't forget to login to [travis-ci](https://travis-ci.org) to enable travis-ci for your repo. 
+Don't forget to login [travis-ci](https://travis-ci.org) and enable travis-ci for your repo. 
 Finally, push to github and wait..
 
 ###Vagrant
 
-Debugging in travis-ci could be difficult. To mock the travis-ci environment in your computer, you can use [vagrant](http://www.vagrantup.com). You can safely ignore this section if your travis-ci builds are good.
+Debugging in travis-ci could be difficult. To mock the travis-ci environment in your computer, you can use [vagrant](http://www.vagrantup.com). You can ignore this section if your travis-ci builds are good.
 
 
 ```
