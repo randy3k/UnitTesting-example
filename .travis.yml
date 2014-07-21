@@ -5,6 +5,7 @@ python:
 
 env:
     global:
+        # Your package name
         - PACKAGE="UnitTesting-example"
     matrix:
         - SUBLIME_TEXT_VERSION="2"
