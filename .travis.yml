@@ -1,3 +1,9 @@
+# send an email to support@travis-ci.com to enable multiple os support
+# http://blog.travis-ci.com/2014-05-13-multi-os-feature-available/
+os:
+  - linux
+  - osx
+
 env:
     global:
         # Your package name
