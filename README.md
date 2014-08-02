@@ -18,7 +18,7 @@ Preparation
 Running Tests
 ----
 
-###Locally
+### Local machine
 
 If the tests are written correctly and UnitTesting is installed, UnitTesting can be triggered via the command palette.
 
@@ -28,7 +28,7 @@ Then in the input panel type your package name, in our case, `UnitTesting-exampl
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/op.png' width='500'></img>
 
-###Travis
+### Travis
 
 If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care of them. First, you have to copy a important file: [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) (caution: with a beginning dot) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) to the name of your package.
 
@@ -36,14 +36,14 @@ Don't forget to login [travis-ci](https://travis-ci.org) and enable travis-ci fo
 Finally, push to github and wait..
 
 
-### Travis-CI OSX support
+### Travis OSX support
 
 Have a look of this [branch](https://github.com/randy3k/UnitTesting-example/tree/osx).
-Now, we need to add a dummy line `language: objective-c` in `.travis.yml` to indicate that we need OS X image. It also means that we have to create a new branch for this different `.travis.yml`. A more sound solution is to use [multiple os feature](http://blog.travis-ci.com/2014-05-13-multi-os-feature-available/). But muiti-os feature is still under developed and is only enabled upon request. 
+Now, we need to add a dummy line `language: objective-c` in `.travis.yml` to indicate that we need OS X image. It also means that we have to create a new branch for this different `.travis.yml`. A more sound solution is to use [multiple os feature](http://blog.travis-ci.com/2014-05-13-multi-os-feature-available/). Muitiple os feature is under beta testing and is only enabled upon request (see the link for details).
 
-###Vagrant
+### Vagrant
 
-Debugging in travis-ci could be difficult. To mock the travis-ci environment in your computer, you can use [vagrant](http://www.vagrantup.com). You can ignore this section if your travis-ci builds are good.
+Debugging in travis-ci could be difficult. To mock the travis-ci environment in your computer, you can use [vagrant](http://www.vagrantup.com). For most users, this section could be ignored.
 
 
 ```
