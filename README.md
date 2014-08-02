@@ -36,10 +36,9 @@ Don't forget to login [travis-ci](https://travis-ci.org) and enable travis-ci fo
 Finally, push to github and wait..
 
 
-### Travis OSX support
+### Travis mutiple os support
 
-Have a look of this [branch](https://github.com/randy3k/UnitTesting-example/tree/osx).
-Now, we need to add a dummy line `language: objective-c` in `.travis.yml` to indicate that we need OS X image. It also means that we have to create a new branch for this different `.travis.yml`. A more sound solution is to use [multiple os feature](http://blog.travis-ci.com/2014-05-13-multi-os-feature-available/). Muitiple os feature is under beta testing and is only enabled upon request (see the link for details).
+To enable [multiple os feature](http://blog.travis-ci.com/2014-05-13-multi-os-feature-available/) for travis-ci, we have to send an email to [support@travis-ci.com](support@travis-ci.com). Muitiple os feature is under beta testing and is only enabled upon request (see the link for details).
 
 ### Vagrant
 
