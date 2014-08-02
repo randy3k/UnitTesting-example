@@ -20,11 +20,11 @@ Running Tests
 
 ### Local machine
 
-If the tests are written correctly and UnitTesting is installed, UnitTesting can be triggered via the command palette.
+If the tests are written correctly and UnitTesting is installed, UnitTesting can be triggered via the command palette. Then in the input panel type your package name, in our case, `UnitTesting-example`.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/cp.png' width='500'></img>
 
-Then in the input panel type your package name, in our case, `UnitTesting-example`.
+The test results will be shown in the outout panel.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/op.png' width='500'></img>
 
@@ -37,6 +37,8 @@ Finally, push to github and wait..
 
 
 ### Travis mutiple os support
+
+<img src='https://raw.github.com/randy3k/UnitTesting-example/fig/mos.png' width='500'></img>
 
 To enable [multiple os feature](http://blog.travis-ci.com/2014-05-13-multi-os-feature-available/) for travis-ci, we have to send an email to [support@travis-ci.com](support@travis-ci.com). Muitiple os feature is under beta testing and is only enabled upon request (see the link for details).
 
