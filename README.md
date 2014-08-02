@@ -35,6 +35,12 @@ If the tests can be run locally, let's put them to travis-ci and let travis-ci t
 Don't forget to login [travis-ci](https://travis-ci.org) and enable travis-ci for your repo. 
 Finally, push to github and wait..
 
+
+### Travis-CI OSX support
+
+Have a look of this [branch](https://github.com/randy3k/UnitTesting-example/tree/osx).
+Now, we need to add a dummy line `language: objective-c` in `.travis.yml` to indicate that we need OS X image. It also means that we have to create a new branch for this different `.travis.yml`. A more sound solution is to use [multiple os feature](http://blog.travis-ci.com/2014-05-13-multi-os-feature-available/). But muiti-os feature is still under developed and is only enabled upon request. 
+
 ###Vagrant
 
 Debugging in travis-ci could be difficult. To mock the travis-ci environment in your computer, you can use [vagrant](http://www.vagrantup.com). You can ignore this section if your travis-ci builds are good.
@@ -52,3 +58,4 @@ python ~/.config/sublime-text-3/Packages/UnitTesting/sbin/run.py UnitTesting-exa
 # after done, kill sublime
 killall sublime_text
 ```
+
