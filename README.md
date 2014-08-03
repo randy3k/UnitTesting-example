@@ -1,8 +1,11 @@
 UnitTesting-example
 ===================
-[![Build Status](https://travis-ci.org/randy3k/UnitTesting-example.png?branch=master)](https://travis-ci.org/randy3k/UnitTesting-example)
+**Plaform** | **Status**
+------------|------------
+Linux & OSX | [![Build Status](https://travis-ci.org/randy3k/UnitTesting-example.png?branch=master)](https://travis-ci.org/randy3k/UnitTesting-example)
+Windows | [![Build status](https://ci.appveyor.com/api/projects/status/l8x5laog8rs2t4p6/branch/master)](https://ci.appveyor.com/project/randy3k/unittesting-example/branch/master)
 
-This is an getting start example on using [UnitTesting](https://github.com/randy3k/UnitTesting) to test a sublime 2 and 3 package locally and via [travis-ci](https://travis-ci.org).
+This is an getting start example on using [UnitTesting](https://github.com/randy3k/UnitTesting) to test a sublime 2 and 3 package locally and via CI services such as [travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com).
 
 Preparation
 ---
@@ -40,7 +43,11 @@ Finally, push to github and wait..
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/mos.png' width='500'></img>
 
-To enable [multiple os feature](http://blog.travis-ci.com/2014-05-13-multi-os-feature-available/) for travis-ci, we have to send an email to [support@travis-ci.com](support@travis-ci.com). Muitiple os feature is under beta testing and is only enabled upon request (see the link for details).
+To enable [multiple os feature](http://blog.travis-ci.com/2014-05-13-multi-os-feature-available/) for travis-ci, we have to send an email to _support@travis-ci.com_. Muitiple os feature is under beta testing and is only enabled upon request (see the link for details).
+
+### Appveyor
+
+To enable Appveyor for windows platform tests, copy the file `appveyor.yml` to your repo, change the `PACKAGE` variable in [appveyor.yml](https://github.com/randy3k/UnitTesting-example/blob/master/appveyor.yml). The last but not least, login [appveyor](http://www.appveyor.com) to add your repo as a project.
 
 ### Vagrant
 
