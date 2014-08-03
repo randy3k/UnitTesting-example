@@ -2,7 +2,7 @@ environment:
     global:
         # Your package name
         PACKAGE: "UnitTesting-example"
-        # a stable version of UnitTesting, TAG=x.x.x
+        # a stable version of UnitTesting, TAG="x.x.x"
         TAG: "master"
     matrix:
         - SUBLIME_TEXT_VERSION : "2"
