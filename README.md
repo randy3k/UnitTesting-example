@@ -23,7 +23,7 @@ Running Tests
 
 ### Local machine
 
-If the tests are written correctly and UnitTesting is installed, UnitTesting can be triggered via the command palette. Then in the input panel type your package name, in our case, `UnitTesting-example`.
+If the tests are written correctly and UnitTesting is installed, UnitTesting can be triggered via the command palette. Then in the input panel type your package name, in our case, `UnitTesting-example`. To run only tests in particular files, use `UnitTesting-example/xxx`. `xxx` is a regular expression to match the file names, `UnitTesting-example/test*.py` is used in default.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/cp.png' width='500'></img>
 
@@ -43,7 +43,7 @@ Finally, push to github and wait..
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/mos.png' width='500'></img>
 
-To enable [multiple os feature](http://blog.travis-ci.com/2014-05-13-multi-os-feature-available/) for travis-ci, we have to send an email to _support@travis-ci.com_. Muitiple os feature is under beta testing and is only enabled upon request (see the link for details).
+To enable [multiple os feature](http://blog.travis-ci.com/2014-05-13-multi-os-feature-available/) for travis-ci, you have to send an email to _support@travis-ci.com_. Muitiple os feature is under beta testing and is only enabled upon request (see the link for details).
 
 ### Appveyor
 
