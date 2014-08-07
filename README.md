@@ -23,7 +23,7 @@ Running Tests
 
 ### Local machine
 
-If the tests are written correctly and UnitTesting is installed, UnitTesting can be triggered via the command palette. Then in the input panel type your package name, in our case, `UnitTesting-example`. To run only tests in particular files, use `UnitTesting-example/xxx`. `xxx` is a regular expression to match the file names, `UnitTesting-example/test*.py` is used in default.
+If the tests are written correctly and UnitTesting is installed, UnitTesting can be triggered via the command palette. Then in the input panel type your package name, in our case, `UnitTesting-example`. To run only tests in particular files, use `UnitTesting-example/foorbar.py`. `foobar.py` is a unix shell wildcard to match the file names, `UnitTesting-example/test*.py` is used in default.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/cp.png' width='500'></img>
 
