@@ -13,6 +13,7 @@ class test_helloworld_command(TestCase):
     def tearDown(self):
         if self.view:
             self.view.set_scratch(True)
+            self.view.window().focus_view(self.view)
             self.view.window().run_command("close_file")
 
     def setText(self, string):
@@ -49,4 +50,3 @@ class test_internal_functions(TestCase):
     def test_foo(self):
         x = helloworld.foo(1)
         self.assertEqual(x, 2)
-
