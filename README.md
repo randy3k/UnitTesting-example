@@ -6,7 +6,7 @@ Linux & OSX | Windows
 
 This is an getting start example on using [UnitTesting](https://github.com/randy3k/UnitTesting) to test a sublime 2 and 3 package locally and via CI services such as [travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com).
 
-If you like it, you could tip me for some snacks by [![](http://img.shields.io/gittip/randy3k.svg)](https://www.gittip.com/randy3k).
+If you like it, you could send me some tips via [![](http://img.shields.io/gittip/randy3k.svg)](https://www.gittip.com/randy3k).
 
 Preparation
 ---
@@ -54,10 +54,9 @@ To enable Appveyor for windows platform tests, copy the file `appveyor.yml` to y
 ### Build status badges
 The following markdown is used to show the build status badges. I am using images from [shields.io](http:/shields.io) to provide consistent badges. Change the username and repo name accordingly.
 ```
-**Plaform** | **Status**
+Linux & OSX | Windows
 ------------|------------
-Linux & OSX | [![Build Status](http://img.shields.io/travis/randy3k/UnitTesting-example/master.svg)](https://travis-ci.org/randy3k/UnitTesting-example)
-Windows | [![Build status](http://img.shields.io/appveyor/ci/randy3k/UnitTesting-example/branch/master.svg)](https://ci.appveyor.com/project/randy3k/unittesting-example/branch/master)
+ [![Build Status](http://img.shields.io/travis/randy3k/UnitTesting-example/master.svg)](https://travis-ci.org/randy3k/UnitTesting-example) | [![Build status](http://img.shields.io/appveyor/ci/randy3k/UnitTesting-example/branch/master.svg)](https://ci.appveyor.com/project/randy3k/UnitTesting-example/branch/master)
 ```
 
 
