@@ -1,11 +1,12 @@
 UnitTesting-example
 ===================
-**Plaform** | **Status**
+Linux & OSX | Windows
 ------------|------------
-Linux & OSX | [![Build Status](http://img.shields.io/travis/randy3k/UnitTesting-example/master.svg)](https://travis-ci.org/randy3k/UnitTesting-example)
-Windows | [![Build status](http://img.shields.io/appveyor/ci/randy3k/UnitTesting-example/branch/master.svg)](https://ci.appveyor.com/project/randy3k/unittesting-example/branch/master)
+ [![Build Status](http://img.shields.io/travis/randy3k/UnitTesting-example/master.svg)](https://travis-ci.org/randy3k/UnitTesting-example) | [![Build status](http://img.shields.io/appveyor/ci/randy3k/UnitTesting-example/branch/master.svg)](https://ci.appveyor.com/project/randy3k/UnitTesting-example/branch/master)
 
 This is an getting start example on using [UnitTesting](https://github.com/randy3k/UnitTesting) to test a sublime 2 and 3 package locally and via CI services such as [travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com).
+
+If you like it, you could tip me for some snacks by [![](http://img.shields.io/gittip/randy3k.svg)](https://www.gittip.com/randy3k).
 
 Preparation
 ---
