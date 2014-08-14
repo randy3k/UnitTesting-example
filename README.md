@@ -49,6 +49,17 @@ To enable [multiple os feature](http://blog.travis-ci.com/2014-05-13-multi-os-fe
 
 To enable Appveyor for windows platform tests, copy the file `appveyor.yml` to your repo, change the `PACKAGE` variable in [appveyor.yml](https://github.com/randy3k/UnitTesting-example/blob/master/appveyor.yml). The last but not least, login [appveyor](http://www.appveyor.com) to add your repo as a project.
 
+
+### Build status badges
+The following markdown is used to show the build status badges. I am using images from [shields.io](http:/shields.io) to provide consistent badges. Change the username and repo name accordingly.
+```
+**Plaform** | **Status**
+------------|------------
+Linux & OSX | [![Build Status](http://img.shields.io/travis/randy3k/UnitTesting-example/master.svg)](https://travis-ci.org/randy3k/UnitTesting-example)
+Windows | [![Build status](http://img.shields.io/appveyor/ci/randy3k/UnitTesting-example/branch/master.svg)](https://ci.appveyor.com/project/randy3k/unittesting-example/branch/master)
+```
+
+
 ### Vagrant
 
 Debugging in travis-ci could be difficult. To mock the travis-ci environment in your computer, you can use [vagrant](http://www.vagrantup.com). For most users, this section could be ignored.
