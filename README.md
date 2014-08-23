@@ -32,9 +32,9 @@ The test results will be shown in the outout panel.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/op.png' width='500'></img>
 
-- Synchronized tests
+- Asynchronized tests (ST 3 only)
 
-To mock the testing environment of CI servers, you may also run the tests via the `UnitTesting (Sync)` command. Sync tests are usually faster than the async tests, but they may freeze Sublime Test.
+By default, tests are run in the main thread. You can invoke asychronized testing via `UnitTesting (Async)` command. Async tests are usually slower than the sync tests because of the user interface.
 
 ### Travis
 
