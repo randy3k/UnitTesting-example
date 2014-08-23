@@ -32,6 +32,10 @@ The test results will be shown in the outout panel.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/op.png' width='500'></img>
 
+- Synchronized tests
+
+To mock the testing environment of CI servers, you may also run the tests via the `UnitTesting (Sync)` command. Sync tests are usually faster than the async tests, but they may freeze Sublime Test.
+
 ### Travis
 
 If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care of them. First, you have to copy a important file: [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) (caution: with a beginning dot) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) to the name of your package.
