@@ -34,7 +34,11 @@ The test results will be shown in the outout panel.
 
 - Asynchronized tests (ST 3 only)
 
-By default, tests are run in the main thread. You can invoke asychronized testing via `UnitTesting (Async)` command. Async tests are usually slower than the sync tests because of the user interface.
+Tests are run in the main thread and blocking the UI. Asychronized testing could be invoked via `UnitTesting (Async)` command. Async tests are usually slower than the sync tests because the UI takes time to repond. It is useful when there are non-blocking codes in the tests. Now, only local machine supports async tests, travis support is in the plan.
+
+- Deferred tests (ST 3 only)
+
+Tests can be written using the [deferred testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness). Details will be released soon.
 
 ### Travis
 
