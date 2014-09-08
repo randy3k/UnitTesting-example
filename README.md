@@ -32,14 +32,6 @@ The test results will be shown in the outout panel.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/op.png' width='500'></img>
 
-- Asynchronized tests (ST 3 only)
-
-Tests are run in the main thread and blocking the UI. Asychronized testing could be invoked via `UnitTesting (Async)` command. Async tests are usually slower than the sync tests because the UI takes time to repond. It is useful when there are non-blocking codes in the tests. Now, only local machine supports async tests, travis support is in the plan.
-
-- Deferred tests (ST 3 only)
-
-Tests can be written using the [deferred testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness). Details will be released soon.
-
 ### Travis
 
 If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care of them. First, you have to copy a important file: [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) (caution: with a beginning dot) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) to the name of your package.
@@ -65,6 +57,25 @@ The following markdown is used to show the build status badges. I am using image
 Linux & OSX | Windows
 ------------|------------
  [![Build Status](http://img.shields.io/travis/randy3k/UnitTesting-example/master.svg)](https://travis-ci.org/randy3k/UnitTesting-example) | [![Build status](http://img.shields.io/appveyor/ci/randy3k/UnitTesting-example/branch/master.svg)](https://ci.appveyor.com/project/randy3k/UnitTesting-example/branch/master)
+```
+
+### Asynchronized tests and Deferrable tests(ST 3 only)
+
+Tests are running in the main thread and blocking the UI. Asychronized testing could be invoked via `UnitTesting (Async)` command. Async tests are usually slower than the sync tests because the UI takes time to repond. It is useful when there are non-blocking codes in the tests. Tests can also be written using the [deferrable testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness).
+
+To activate async testing or deferred testing on travis and appveyor. Change the followings in `.travis.yml` and `appveyor.yml`.
+
+```
+// .travis.yml
+- sh travis.sh run_tests --async
+// or
+- sh travis.sh run_tests --deferred
+
+// appveyor.yml
+- ps: .\appveyor.ps1 "run_tests" -async
+// or
+- ps: .\appveyor.ps1 "run_tests" -deferred
+
 ```
 
 
