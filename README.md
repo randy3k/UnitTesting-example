@@ -72,9 +72,9 @@ To activate async testing or deferred testing on travis and appveyor. Change the
 - sh travis.sh run_tests --deferred
 
 // appveyor.yml
-- ps: .\appveyor.ps1 "run_tests" -async
+- ps: .\appveyor.ps1 "run_tests" -async -verbose
 // or
-- ps: .\appveyor.ps1 "run_tests" -deferred
+- ps: .\appveyor.ps1 "run_tests" -deferred -verbose
 
 ```
 
