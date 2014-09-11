@@ -85,15 +85,13 @@ Debugging in travis-ci could be difficult. To mock the travis-ci environment in 
 
 
 ```
-# clone the example (not necessary in your sublime packages directory)
+# clone the example to somewhere
 git clone https://github.com/randy3k/UnitTesting-example
 cd UnitTesting-example
-# you can also launch `st2`
-vagrant up st3 --provision
+# you can also launch `st2` config
+vagrant up st3
+# enter ssh
 vagrant ssh st3
-# if st2, change to sublime-text-2
-python ~/.config/sublime-text-3/Packages/UnitTesting/sbin/run.py UnitTesting-example
-# after done, kill sublime
-killall sublime_text
+# run tests
+sh vagrant.sh run_tests
 ```
-
