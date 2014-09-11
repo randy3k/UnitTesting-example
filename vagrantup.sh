@@ -6,23 +6,22 @@ export PACKAGE="$2"
 export STP=/home/vagrant/.config/sublime-text-$SUBLIME_TEXT_VERSION/Packages
 
 if [ -z $(which subl) ]; then
+    apt-get update
+    apt-get install python-software-properties -y
     if [ $SUBLIME_TEXT_VERSION -eq 2 ]; then
         echo installing sublime 2
         add-apt-repository ppa:webupd8team/sublime-text-2 -y
         apt-get update
-        apt-get install python-software-properties -y
         apt-get install sublime-text -y
     elif [ $SUBLIME_TEXT_VERSION -eq 3 ]; then
         echo installing sublime 3
         add-apt-repository ppa:webupd8team/sublime-text-3 -y
         apt-get update
-        apt-get install python-software-properties -y
         apt-get install sublime-text-installer -y
     fi
     apt-get install git -y
     apt-get install curl -y
     apt-get install xvfb libgtk2.0-0 -y
-    # curl https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
 fi
 
 if [ ! -d $STP ]; then
