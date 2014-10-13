@@ -44,7 +44,7 @@ Finally, push to github and wait..
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/mos.png' width='500'></img>
 
-To enable [multiple os feature](http://blog.travis-ci.com/2014-05-13-multi-os-feature-available/) for travis-ci, you have to send an email to _support@travis-ci.com_. Muitiple os feature is under beta testing and is only enabled upon request (see the link for details).
+To enable multiple os feature for travis-ci, check [http://docs.travis-ci.com/user/multi-os/](this).
 
 ### Appveyor
 
