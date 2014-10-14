@@ -61,7 +61,7 @@ Linux & OSX | Windows
 
 ### Use a different test directory
 
-Add a file `unittesting.json` in your repo with the corresponding directory name:
+Add a file `unittesting.json` in your repo with the corresponding directory name, eg `unittest`:
 
 ```
 {
@@ -69,7 +69,7 @@ Add a file `unittesting.json` in your repo with the corresponding directory name
 }
 ```
 
-### Asynchronized tests and Deferrable tests(ST 3 only)
+### Asynchronized tests and Deferrable tests (ST 3 only)
 
 Tests are running in the main thread and blocking the UI. Asychronized testing could be invoked via `UnitTesting (Async)` command. Async tests are usually slower than the sync tests because the UI takes time to repond. It is useful when there are non-blocking codes in the tests. Tests can also be written using the [deferrable testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness).
 
