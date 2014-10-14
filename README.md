@@ -59,7 +59,7 @@ Linux & OSX | Windows
  [![Build Status](http://img.shields.io/travis/randy3k/UnitTesting-example/master.svg)](https://travis-ci.org/randy3k/UnitTesting-example) | [![Build status](http://img.shields.io/appveyor/ci/randy3k/UnitTesting-example/branch/master.svg)](https://ci.appveyor.com/project/randy3k/UnitTesting-example/branch/master)
 ```
 
-### Usage a different test directory
+### Use a different test directory
 
 Add a file `unittesting.json` in your repo with the corresponding directory name:
 
