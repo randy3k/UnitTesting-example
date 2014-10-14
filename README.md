@@ -59,24 +59,30 @@ Linux & OSX | Windows
  [![Build Status](http://img.shields.io/travis/randy3k/UnitTesting-example/master.svg)](https://travis-ci.org/randy3k/UnitTesting-example) | [![Build status](http://img.shields.io/appveyor/ci/randy3k/UnitTesting-example/branch/master.svg)](https://ci.appveyor.com/project/randy3k/UnitTesting-example/branch/master)
 ```
 
+### Usage a different test directory
+
+Add a file `unittesting.json` in your repo with the corresponding directory name:
+
+```
+{
+    "tests_dir" : "unittest"
+}
+```
+
 ### Asynchronized tests and Deferrable tests(ST 3 only)
 
 Tests are running in the main thread and blocking the UI. Asychronized testing could be invoked via `UnitTesting (Async)` command. Async tests are usually slower than the sync tests because the UI takes time to repond. It is useful when there are non-blocking codes in the tests. Tests can also be written using the [deferrable testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness).
 
-To activate async testing or deferred testing on travis and appveyor. Change the followings in `.travis.yml` and `appveyor.yml`.
+To activate async testing or deferred testing on travis and appveyor. Add a file `unittesting.json` in your repo with the following:
 
 ```
-// .travis.yml
-- sh travis.sh run_tests --async
-// or
-- sh travis.sh run_tests --deferred
-
-// appveyor.yml
-- ps: .\appveyor.ps1 "run_tests" -async -verbose
-// or
-- ps: .\appveyor.ps1 "run_tests" -deferred -verbose
-
+{
+    "async": true,
+    "deferred": false
+}
 ```
+
+Note: if `async` is true, `deferred` is forced to be `false`.
 
 
 ### Vagrant
