@@ -12,7 +12,7 @@ Preparation
 ---
 1. Before testing anything, you have to install [UnitTesting](https://github.com/randy3k/UnitTesting) via Package Control or clone it from [source](https://github.com/randy3k/UnitTesting).
 2. Your package! In our case, it is [helloworld.py](https://github.com/randy3k/UnitTesting-example/blob/master/helloworld.py)
-3. You also have to know how to write unittest testcases. TestCases should be placed in `test*.py` under the directory `tests`. They are loaded by a modified [TestLoader](https://github.com/randy3k/UnitTesting/blob/master/loader.py).
+3. You also have to know how to write unittest testcases. TestCases should be placed in `test*.py` under the directory `tests` (configurable, see below). They are loaded by a modified [TestLoader](https://github.com/randy3k/UnitTesting/blob/master/unittesting/loader.py).
     - ST2 developers should read [this](http://docs.python.org/2.6/library/unittest.html) for unittest documentation.
     - ST3 developers should read [this](http://docs.python.org/3.3/library/unittest.html). 
     - You may also want to look that the file [test.py](https://github.com/randy3k/UnitTesting-example/blob/master/tests/test.py) under the `tests` directory for the minimal example.
@@ -24,7 +24,7 @@ Running Tests
 
 ### Local machine
 
-If the tests are written correctly and UnitTesting is installed, UnitTesting can be triggered via the command palette. Then in the input panel type your package name, in our case, `UnitTesting-example`. To run only tests in particular files, use `UnitTesting-example:foorbar.py`. `foobar.py` is a unix shell wildcard to match the file names, `UnitTesting-example:test*.py` is used in default.
+If the tests are written correctly and UnitTesting is installed, UnitTesting can be triggered via the command palette. Then in the input panel type your package name, in our case, `UnitTesting-example`. To run only tests in particular files, enter `<Package name>:<filename>`. `<filename>` should be a unix shell wildcard to match the file names, `<Package name>:test*.py` is used in default.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/cp.png' width='500'></img>
 
@@ -61,7 +61,7 @@ Linux & OSX | Windows
 
 ### Use a different test directory
 
-Add a file `unittesting.json` in your repo with the corresponding directory name, eg `unittest`:
+The default test directory is "tests". To change the test directory, add a file `unittesting.json` to your repo with the corresponding directory name, eg `unittest`:
 
 ```
 {
@@ -73,7 +73,7 @@ Add a file `unittesting.json` in your repo with the corresponding directory name
 
 Tests are running in the main thread and blocking the UI. Asychronized testing could be invoked via `UnitTesting (Async)` command. Async tests are usually slower than the sync tests because the UI takes time to repond. It is useful when there are non-blocking codes in the tests. Tests can also be written using the [deferrable testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness).
 
-To activate async testing or deferred testing on travis and appveyor. Add a file `unittesting.json` in your repo with the following:
+To activate async testing or deferred testing on travis and appveyor. Add the file `unittesting.json` to your repo with the following:
 
 ```
 {
