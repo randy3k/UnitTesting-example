@@ -44,7 +44,7 @@ Finally, push to github and wait..
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/mos.png' width='500'></img>
 
-To enable multiple os feature for travis-ci, check [http://docs.travis-ci.com/user/multi-os/](this).
+To enable multiple os feature for travis-ci, check [this](http://docs.travis-ci.com/user/multi-os/).
 
 ### Appveyor
 
