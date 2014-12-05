@@ -1,1 +1,1 @@
-Example of non-blocking testcase.
+Example of a blocking testcase.
