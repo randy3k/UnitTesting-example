@@ -12,4 +12,5 @@ class test_helloworld_command(TestCase):
         p = subprocess.Popen("sleep 2; echo abc", shell=True, stdout=subprocess.PIPE)
         p.wait()
         out,err = p.communicate()
+        out = out.decode()
         self.assertEqual(out, "abc\n")
