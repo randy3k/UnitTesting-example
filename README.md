@@ -71,7 +71,7 @@ The default test directory is "tests". To change the test directory, add a file 
 
 ### Asynchronized tests and Deferrable tests (ST 3 only)
 
-Tests are running in the main thread and blocking the UI. Asychronized testing could be invoked via `UnitTesting (Async)` command. Async tests are usually slower than the sync tests because the UI takes time to repond. It is useful when there are non-blocking codes in the tests. Tests can also be written using the [deferrable testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness).
+Tests are running in the main thread and blocking the UI. Asychronized testing could be used if you need the UI to respond. Async tests are usually slower than the sync tests because the UI takes time to repond. It is useful when there are non-blocking codes in the tests. Tests can also be written using the [deferrable testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness).
 
 To activate async testing or deferred testing on travis and appveyor. Add the file `unittesting.json` to your repo with the following:
 
