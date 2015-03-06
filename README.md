@@ -2,7 +2,7 @@ UnitTesting-example
 ===================
 Linux & OSX | Windows
 ------------|------------
- [![Build Status](http://img.shields.io/travis/randy3k/UnitTesting-example/master.svg)](https://travis-ci.org/randy3k/UnitTesting-example) | [![Build status](https://img.shields.io/appveyor/ci/randy3k/UnitTesting-example/master.svg)](https://ci.appveyor.com/project/randy3k/UnitTesting-example/branch/master)
+[![Build Status](https://travis-ci.org/randy3k/UnitTesting-example.svg?branch=master)](https://travis-ci.org/randy3k/UnitTesting-example) | [![Build status](https://ci.appveyor.com/api/projects/status/l8x5laog8rs2t4p6/branch/master?svg=true)](https://ci.appveyor.com/project/randy3k/unittesting-example/branch/master)
 
 This is an getting start example on using [UnitTesting](https://github.com/randy3k/UnitTesting) to test a sublime 2 and 3 package locally and via CI services such as [travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com).
 
@@ -50,14 +50,6 @@ To enable multiple os feature for travis-ci, check [this](http://docs.travis-ci.
 
 To enable Appveyor for windows platform tests, copy the file `appveyor.yml` to your repo, change the `PACKAGE` variable in [appveyor.yml](https://github.com/randy3k/UnitTesting-example/blob/master/appveyor.yml). The last but not least, login [appveyor](http://www.appveyor.com) to add your repo as a project.
 
-
-### Build status badges
-The following markdown is used to show the build status badges. I am using images from [shields.io](http:/shields.io) to provide consistent badges. Change the username and repo name accordingly.
-```
-Linux & OSX | Windows
-------------|------------
- [![Build Status](http://img.shields.io/travis/randy3k/UnitTesting-example/master.svg)](https://travis-ci.org/randy3k/UnitTesting-example) | [![Build status](https://img.shields.io/appveyor/ci/randy3k/UnitTesting-example/master.svg)](https://ci.appveyor.com/project/randy3k/UnitTesting-example/branch/master)
-```
 
 ### Use a different test directory
 
