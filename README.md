@@ -61,20 +61,37 @@ The default test directory is "tests". To change the test directory, add a file 
 }
 ```
 
-### Asynchronized tests and Deferrable tests (ST 3 only)
+### Deferred testing
+Tests can also be written using the [deferrable testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness).
 
-Tests are running in the main thread and blocking the UI. Asychronized testing could be used if you need the UI to respond. Async tests are usually slower than the sync tests because the UI takes time to repond. It is useful when there are non-blocking codes in the tests. Tests can also be written using the [deferrable testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness).
+It provides deferred testcases, such you are able to run sublime commands from your test cases and give control to sublime text and get it back later. Would be useful to test `sublime_plugin.EventListener`.
 
-To activate async testing or deferred testing on travis and appveyor. Add the file `unittesting.json` to your repo with the following:
+A example would be found [here](https://github.com/randy3k/AutoWrap/tree/master/tests).
+
+To activate deferred testing on travis and appveyor. Add the file `unittesting.json` to your repo with the following:
+
+```
+{
+    "deferred": true,
+}
+```
+
+### Async testing (ST 3 only)
+
+Tests are running in the main thread and blocking the UI. Asychronized testing could be used if you need the UI to respond. Async tests are usually slower than the sync tests because the UI takes time to repond. It is useful when there are non-blocking codes in the tests. 
+
+To activate async testing on travis and appveyor. Add the file `unittesting.json` to your repo with the following:
 
 ```
 {
     "async": true,
-    "deferred": false
 }
 ```
 
-Note: if `async` is true, `deferred` is forced to be `false`.
+Note: 
+
+1. `async` is forced to be `false` on ST2
+2. if `async` is true, `deferred` is forced to be `false`.
 
 
 ### Vagrant
