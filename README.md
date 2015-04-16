@@ -61,6 +61,16 @@ The default test directory is "tests". To change the test directory, add a file 
 }
 ```
 
+### Redirect test result to a file
+
+The test result could be redirected to a file by specifying the `output` variable in `unittesting.json`. It can also be redirected to a temporary file by using `"output": "<tempfile>"`. The temporary file will be opened in the current window.
+
+```
+{
+    "output" : "/tmp/foo"
+}
+```
+
 ### Deferred testing
 Tests can also be written using the [deferrable testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness).
 
