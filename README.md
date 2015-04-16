@@ -67,7 +67,7 @@ The test result could be redirected to a file by specifying the `output` variabl
 
 ```
 {
-    "output" : "/tmp/foo"
+    "output" : "foo.txt"
 }
 ```
 
