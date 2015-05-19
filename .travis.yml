@@ -2,6 +2,8 @@ os:
     - linux
     - osx
 
+sudo: required
+
 env:
     global:
         # Your package name
