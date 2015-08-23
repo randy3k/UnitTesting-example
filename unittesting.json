@@ -2,7 +2,7 @@
     "tests_dir" : "tests",
     "pattern" : "test*.py",
     "async": false,
-    "deferred": true,
+    "deferred": false,
     "verbosity": 2,
     "output": "<panel>"
 }
