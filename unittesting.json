@@ -1,7 +1,8 @@
 {
     "tests_dir" : "tests",
+    "pattern" : "test*.py",
     "async": false,
-    "deferred": false,
+    "deferred": true,
     "verbosity": 2,
     "output": "<panel>"
 }
