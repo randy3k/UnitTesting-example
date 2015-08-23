@@ -104,6 +104,16 @@ Note:
 2. if `async` is true, `deferred` is forced to be `false`.
 
 
+### Troubleshooting
+
+If you keep encountering unexpected errors, you may want to check the
+`close_windows_when_empty` setting. I have spent at least a few hours to
+realize this was the cause of a error. The `true` value would close the last
+window if there is no view. It is fine if you are running blocking code.
+However, if you are using deferred or async testcases, this is something you
+definitely want to check.
+
+
 ### Vagrant
 
 Debugging in travis-ci could be difficult. To mock the travis-ci environment in your computer, you can use [vagrant](http://www.vagrantup.com). For most users, this section could be ignored.
