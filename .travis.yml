@@ -8,6 +8,7 @@ env:
     global:
         # Your package name
         - PACKAGE="UnitTesting-example"
+        - TAG="dev"
     matrix:
         # - SUBLIME_TEXT_VERSION="2"
         - SUBLIME_TEXT_VERSION="3"
