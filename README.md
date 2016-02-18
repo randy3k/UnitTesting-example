@@ -6,16 +6,18 @@ Linux & OSX | Windows
 
 This is an getting start example on using [UnitTesting](https://github.com/randy3k/UnitTesting) to test a sublime 2 and 3 package locally and via CI services such as [travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com).
 
+For testing syntax_test files, go directly to [testing syntax_test files](README.md#testing-syntax_test-files).
+
 If you like it, you could send me some tips via [paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YAPVT8VB6RR9C&lc=US&item_name=tips&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted) or [gratipay](https://gratipay.com/~randy3k/).
 
 Preparation
 ---
 1. Before testing anything, you have to install [UnitTesting](https://github.com/randy3k/UnitTesting) via Package Control or clone it from [source](https://github.com/randy3k/UnitTesting).
-2. Your package! In our case, it is [helloworld.py](https://github.com/randy3k/UnitTesting-example/blob/master/helloworld.py)
+2. Your package! In our case, it is [helloworld.py](helloworld.py)
 3. You also have to know how to write unittest testcases. TestCases should be placed in `test*.py` under the directory `tests` (configurable, see below). They are loaded by a modified [TestLoader](https://github.com/randy3k/UnitTesting/blob/master/unittesting/core/loader.py).
     - ST2 developers should read [this](http://docs.python.org/2.6/library/unittest.html) for unittest documentation.
     - ST3 developers should read [this](http://docs.python.org/3.3/library/unittest.html). 
-    - You may also want to look that the file [test.py](https://github.com/randy3k/UnitTesting-example/blob/master/tests/test.py) under the `tests` directory for the minimal example.
+    - You may also want to look that the file [test.py](tests/test.py) under the `tests` directory for the minimal example.
 
 ------------
 
@@ -34,7 +36,7 @@ The test results will be shown in the outout panel.
 
 ### Travis
 
-If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care of them. First, you have to copy a important file: [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) (caution: with a beginning dot) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](https://github.com/randy3k/UnitTesting-example/blob/master/.travis.yml) to the name of your package.
+If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care of them. First, you have to copy a important file: [.travis.yml](.travis.yml) (caution: with a beginning dot) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](.travis.yml) to the name of your package.
 
 Don't forget to login [travis-ci](https://travis-ci.org) and enable travis-ci for your repo. 
 Finally, push to github and wait..
@@ -48,8 +50,13 @@ To enable multiple os feature for travis-ci, check [this](http://docs.travis-ci.
 
 ### Appveyor
 
-To enable Appveyor for windows platform tests, copy the file `appveyor.yml` to your repo, change the `PACKAGE` variable in [appveyor.yml](https://github.com/randy3k/UnitTesting-example/blob/master/appveyor.yml). The last but not least, login [appveyor](http://www.appveyor.com) to add your repo as a project.
+To enable Appveyor for windows platform tests, copy the file `appveyor.yml` to your repo, change the `PACKAGE` variable in [appveyor.yml](appveyor.yml). The last but not least, login [appveyor](http://www.appveyor.com) to add your repo as a project.
 
+
+### Testing syntax_test files
+
+To enable testing of the syntax_test files, please copy the [.travis.yml](.travis.yml)/[appveyor.yml](appveyor.yml), 
+and uncomment the script line of `run_syntax_tests` in those files. You should comment out the `run_tests` line if your package does not contain any unittest testcases. Check [syntax](https://github.com/randy3k/UnitTesting-example/tree/syntax) branch for an example.
 
 ### Use a different test directory
 
