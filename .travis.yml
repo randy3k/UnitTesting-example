@@ -8,13 +8,12 @@ env:
     global:
         # Your package name
         - PACKAGE="UnitTesting-example"
-        - TAG="dev"
     matrix:
-        # - SUBLIME_TEXT_VERSION="2"
+        - SUBLIME_TEXT_VERSION="2"
         - SUBLIME_TEXT_VERSION="3"
 
 before_install:
-    - curl -OL https://raw.githubusercontent.com/randy3k/UnitTesting/dev/sbin/travis.sh
+    - curl -OL https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/travis.sh
 
 install:
     - sh travis.sh bootstrap
