@@ -10,7 +10,9 @@ class test_helloworld_command(TestCase):
 
     def setUp(self):
         self.view = sublime.active_window().new_file()
-        self.view.settings().set("close_windows_when_empty", False)
+        # make sure we have a window to work with
+        s = sublime.load_settings("Preferences.sublime-settings")
+        s.set("close_windows_when_empty", False)
 
     def tearDown(self):
         if self.view:
