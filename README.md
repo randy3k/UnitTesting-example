@@ -83,7 +83,7 @@ Tests can also be written using the [deferrable testcase](https://bitbucket.org/
 
 It provides deferred testcases, such you are able to run sublime commands from your test cases and give control to sublime text and get it back later. Would be useful to test `sublime_plugin.EventListener`.
 
-A example would be found [here](https://github.com/randy3k/AutoWrap/tree/master/tests).
+A example would be found in [deferred](https://github.com/randy3k/UnitTesting-example/tree/deferred) branch.
 
 To activate deferred testing on travis and appveyor. Add the file `unittesting.json` to your repo with the following:
 
@@ -95,7 +95,7 @@ To activate deferred testing on travis and appveyor. Add the file `unittesting.j
 
 ### Async testing (ST 3 only)
 
-Tests are running in the main thread and blocking the UI. Asychronized testing could be used if you need the UI to respond. Async tests are usually slower than the sync tests because the UI takes time to repond. It is useful when there are non-blocking codes in the tests. 
+Tests are running in the main thread and blocking the UI. Asychronized testing could be used if you need the UI to respond. Async tests are usually slower than the sync tests because the UI takes time to repond. It is useful when there are non-blocking codes in the tests. A example would be found in [async](https://github.com/randy3k/UnitTesting-example/tree/async) branch.
 
 To activate async testing on travis and appveyor. Add the file `unittesting.json` to your repo with the following:
 
