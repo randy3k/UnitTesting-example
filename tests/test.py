@@ -1,7 +1,6 @@
 import sublime
-import sys
 from unittest import TestCase
-import subprocess
+import time
 
 version = sublime.version()
 
@@ -10,8 +9,11 @@ version = sublime.version()
 class test_helloworld_command(TestCase):
 
     def test_hello_world(self):
-        p = subprocess.Popen("sleep 2; echo abc", shell=True, stdout=subprocess.PIPE)
-        p.wait()
-        out, err = p.communicate()
-        out = out.decode()
-        self.assertEqual(out, "abc\n")
+        foo = [0]
+
+        def delay():
+            foo[0] = 1
+
+        sublime.set_timeout(delay, 1000)
+        time.sleep(2)
+        self.assertEqual(foo[0], 1)
