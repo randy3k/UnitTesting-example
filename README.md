@@ -4,6 +4,22 @@ Linux & OSX | Windows
 ------------|------------
 [![Build Status](https://travis-ci.org/randy3k/UnitTesting-example.svg?branch=master)](https://travis-ci.org/randy3k/UnitTesting-example) | [![Build status](https://ci.appveyor.com/api/projects/status/l8x5laog8rs2t4p6/branch/master?svg=true)](https://ci.appveyor.com/project/randy3k/unittesting-example/branch/master)
 
+------------
+
+### Importance notice for Travis CI
+
+Recently, UnitTesting has been updated to support `run_syntex_test` and `install_package_control`. Since there will be more than one script running, we need to start `xvfb` a bit earlier, see [here](https://docs.travis-ci.com/user/gui-and-headless-browsers/), start `xvfb` like the following in the [.travis.yml](.travis.yml),
+
+```yml
+        - if [ "$TRAVIS_OS_NAME" == "linux"  ]; then
+                export DISPLAY=:99.0;
+                sh -e /etc/init.d/xvfb start;
+          fi
+```
+
+
+------------
+
 This is an getting start example on using [UnitTesting](https://github.com/randy3k/UnitTesting) to test a sublime 2 and 3 package locally and via CI services such as [travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com).
 
 For testing syntax_test files, go directly to [testing syntax_test files](README.md#testing-syntax_test-files).
@@ -19,7 +35,7 @@ Preparation
     - ST3 developers should read [this](http://docs.python.org/3.3/library/unittest.html). 
     - You may also want to look that the file [test.py](tests/test.py) under the `tests` directory for the minimal example.
 
-------------
+
 
 Running Tests
 ----
@@ -34,29 +50,27 @@ The test results will be shown in the outout panel.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/op.png' width='500'></img>
 
-### Travis
+### Travis and Appveyor
 
-If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care of them. First, you have to copy a important file: [.travis.yml](.travis.yml) (caution: with a beginning dot) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](.travis.yml) to the name of your package.
-
-Don't forget to login [travis-ci](https://travis-ci.org) and enable travis-ci for your repo. 
-Finally, push to github and wait..
-
-
-### Travis mutiple os support
-
-<img src='https://raw.github.com/randy3k/UnitTesting-example/fig/mos.png' width='500'></img>
-
-To enable multiple os feature for travis-ci, check [this](http://docs.travis-ci.com/user/multi-os/).
-
-### Appveyor
+If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care of them. First, you have to copy a important file: [.travis.yml](.travis.yml) (caution: with a beginning dot) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](.travis.yml) to the name of your package. Don't forget to login [travis-ci](https://travis-ci.org) and enable travis-ci for your repo. Finally, push to github and wait..
 
 To enable Appveyor for windows platform tests, copy the file `appveyor.yml` to your repo, change the `PACKAGE` variable in [appveyor.yml](appveyor.yml). The last but not least, login [appveyor](http://www.appveyor.com) to add your repo as a project.
+
+Installation of Sublime Text on Travis and Appveyor are handled by the scripts in [sublime-text-installer](https://github.com/randy3k/sublime_text_installer).
+
+### Installing Package Control
+
+If your package uses Package Control dependencies, you may want to install Package Control by umcommenting the line of `install_package_control` in [.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml).
 
 
 ### Testing syntax_test files
 
-To enable testing of the syntax_test files, please copy the [.travis.yml](.travis.yml)/[appveyor.yml](appveyor.yml), 
-and uncomment the script line of `run_syntax_tests` in those files. You should comment out the `run_tests` line if your package does not contain any unittest testcases. Check [syntax](https://github.com/randy3k/UnitTesting-example/tree/syntax) branch for an example.
+To enable testing of the syntax_test files, please copy the [.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml), 
+and use the `run_syntax_tests` in those files. Check [syntax](https://github.com/randy3k/UnitTesting-example/tree/syntax) branch for an example.
+
+
+Options
+----
 
 ### Use a different test directory
 
