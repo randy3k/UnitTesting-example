@@ -8,7 +8,7 @@ Linux & OSX | Windows
 
 ### Importance notice for Travis CI
 
-Recently, UnitTesting has been updated to support `run_syntex_test` and `install_package_control`. Since there will be more than one script running, we need to start `xvfb` a bit earlier, see [here](https://docs.travis-ci.com/user/gui-and-headless-browsers/), start `xvfb` like the following in the [.travis.yml](.travis.yml),
+Recently, UnitTesting has been updated to support `run_syntex_tests` and `install_package_control`. Since there will be more than one script running, we need to start `xvfb` a bit earlier, see [here](https://docs.travis-ci.com/user/gui-and-headless-browsers/), start `xvfb` like the following in the [.travis.yml](.travis.yml),
 
 ```yml
         - if [ "$TRAVIS_OS_NAME" == "linux"  ]; then
