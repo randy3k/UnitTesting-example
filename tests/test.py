@@ -1,11 +1,5 @@
 import sublime
-
-version = sublime.version()
-
-if version >= "3000":
-    from UnitTesting.unittesting import DeferrableTestCase
-else:
-    from unittesting import DeferrableTestCase
+from unittesting import DeferrableTestCase
 
 version = sublime.version()
 
