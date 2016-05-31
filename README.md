@@ -6,20 +6,6 @@ Linux & OSX | Windows
 
 ------------
 
-### Importance notice for Travis CI
-
-Recently, UnitTesting has been updated to support `run_syntex_tests` and `install_package_control`. Since there will be more than one script running, we need to start `xvfb` a bit earlier, see [here](https://docs.travis-ci.com/user/gui-and-headless-browsers/), start `xvfb` like the following in the [.travis.yml](.travis.yml),
-
-```yml
-        - if [ "$TRAVIS_OS_NAME" == "linux"  ]; then
-                export DISPLAY=:99.0;
-                sh -e /etc/init.d/xvfb start;
-          fi
-```
-
-
-------------
-
 This is an getting start example on using [UnitTesting](https://github.com/randy3k/UnitTesting) to test a sublime 2 and 3 package locally and via CI services such as [travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com).
 
 For testing syntax_test files, go directly to [testing syntax_test files](README.md#testing-syntax_test-files).
