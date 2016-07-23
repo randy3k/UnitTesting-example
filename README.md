@@ -10,6 +10,8 @@ This is an getting start example on using [UnitTesting](https://github.com/randy
 
 For testing syntax_test files, go directly to [testing syntax_test files](README.md#testing-syntax_test-files).
 
+Install [PackageReloader](https://github.com/randy3k/PackageReloader) to reload the package automatically before running the tests.
+
 If you like it, you could send me some tips via [paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YAPVT8VB6RR9C&lc=US&item_name=tips&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted) or [gratipay](https://gratipay.com/~randy3k/).
 
 Preparation
@@ -49,10 +51,16 @@ Installation of Sublime Text on Travis and Appveyor are handled by the scripts i
 If your package uses Package Control dependencies, you may want to install Package Control by umcommenting the line of `install_package_control` in [.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml).
 
 
-### Testing syntax_test files
+### Testing syntax_test files on CIs
 
 To enable testing of the syntax_test files, please copy the [.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml), 
 and use the `run_syntax_tests` in those files. Check [syntax](https://github.com/randy3k/UnitTesting-example/tree/syntax) branch for an example.
+
+
+Reloading Package
+---
+
+If [PackageReloader](https://github.com/randy3k/PackageReloader) is installed, you could run the command `UnitTesting: Reload ....` to reload and run the current tests.
 
 
 Options
