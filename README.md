@@ -99,7 +99,8 @@ just have to specific three things in `.travis.yml`
 
 1. run `coveralls` after success
 
-Check [.travis.yml](.travis.yml) for details.
+Check [.travis.yml](.travis.yml) for details. [.coveragerc](.coveragerc) is
+used to control the coverage configuations.
 
 
 Options
