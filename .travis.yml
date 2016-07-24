@@ -21,14 +21,23 @@ before_install:
       fi
 
 install:
+    # remove this if don't need coveralls
+    - if [ "$SUBLIME_TEXT_VERSION" == "3"  ]; then
+            sudo pip install python-coveralls;
+      fi
+    # bootstrap the testing environment
     - sh travis.sh bootstrap
     # install Package Control and package denepdencies
     # - sh travis.sh install_package_control
 
 script:
-    - sh travis.sh run_tests
+    - sh travis.sh run_tests --coverage
     # testing syntax_test files
     # - sh travis.sh run_syntax_tests
+
+after_success:
+    # remove this line if don't need coveralls
+    - coveralls
 
 notifications:
     email: false
