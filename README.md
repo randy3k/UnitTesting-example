@@ -4,6 +4,8 @@ UnitTesting-example
 [![Build Status](https://travis-ci.org/randy3k/UnitTesting-example.svg?branch=master)](https://travis-ci.org/randy3k/UnitTesting-example) 
 [![Build status](https://ci.appveyor.com/api/projects/status/9nnjlnj6tetbxuqd/branch/master?svg=true)](https://ci.appveyor.com/project/randy3k/unittesting-example/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/randy3k/UnitTesting-example/badge.svg?branch=master)](https://coveralls.io/github/randy3k/UnitTesting-example?branch=coverage)
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=Randy%2ecs%2elai%40gmail%2ecom&amp;lc=US&amp;item_name=Package&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3apaypal%2ddonate%2dyellow%2esvg%3aNonHosted" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-blue.svg" /></a>
+<a href="https://gratipay.com/~randy3k/" title="Donate to this project using Gratipay"><img src="https://img.shields.io/badge/gratipay-donate-yellow.svg" /></a>
 
 
 ------------
@@ -14,7 +16,6 @@ For testing syntax_test files, go directly to [testing syntax_test files](README
 
 Install [PackageReloader](https://github.com/randy3k/PackageReloader) to reload the package automatically before running the tests.
 
-If you like it, you could send me some tips via [paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YAPVT8VB6RR9C&lc=US&item_name=tips&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted) or [gratipay](https://gratipay.com/~randy3k/).
 
 Preparation
 ---
@@ -32,7 +33,12 @@ Running Tests
 
 ### Local machine
 
-If the tests are written correctly and UnitTesting is installed, UnitTesting can be triggered via the command palette. Then in the input panel type your package name, in our case, `UnitTesting-example`. To run only tests in particular files, enter `<Package name>:<filename>`. `<filename>` should be a unix shell wildcard to match the file names, `<Package name>:test*.py` is used in default.
+If the tests are written correctly and UnitTesting is installed, UnitTesting
+can be triggered via the command palette. Then in the input panel type your
+package name, in our case, `UnitTesting-example`. To run only tests in
+particular files, enter `<Package name>:<filename>`. `<filename>` should be a
+unix shell wildcard to match the file names, `<Package name>:test*.py` is used
+in default.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/cp.png' width='500'></img>
 
@@ -40,44 +46,60 @@ The test results will be shown in the outout panel.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/op.png' width='500'></img>
 
+There are also quick commands to run tests of the current project or file. If
+[PackageReloader](https://github.com/randy3k/PackageReloader) is installed,
+you could run the command `UnitTesting: Reload ....` to reload and run the
+current tests.
+
+
 ### Travis and Appveyor
 
-If the tests can be run locally, let's put them to travis-ci and let travis-ci takes care of them. First, you have to copy a important file: [.travis.yml](.travis.yml) (caution: with a beginning dot) to your repo. Then change the env variable `PACKAGE` in [.travis.yml](.travis.yml) to the name of your package. Don't forget to login [travis-ci](https://travis-ci.org) and enable travis-ci for your repo. Finally, push to github and wait..
+If the tests can be run locally, let's put them to travis-ci and let travis-ci
+takes care of them. First, you have to copy a important file:
+[.travis.yml](.travis.yml) (caution: with a beginning dot) to your repo. Then
+change the env variable `PACKAGE` in [.travis.yml](.travis.yml) to the name of
+your package. Don't forget to login [travis-ci](https://travis-ci.org) and
+enable travis-ci for your repo. Finally, push to github and wait..
 
-To enable Appveyor for windows platform tests, copy the file `appveyor.yml` to your repo, change the `PACKAGE` variable in [appveyor.yml](appveyor.yml). The last but not least, login [appveyor](http://www.appveyor.com) to add your repo as a project.
+To enable Appveyor for windows platform tests, copy the file `appveyor.yml` to
+your repo, change the `PACKAGE` variable in [appveyor.yml](appveyor.yml). The
+last but not least, login [appveyor](http://www.appveyor.com) to add your repo
+as a project.
 
-Installation of Sublime Text on Travis and Appveyor are handled by the scripts in [sublime-text-installer](https://github.com/randy3k/sublime_text_installer).
+Installation of Sublime Text on Travis and Appveyor are handled by the scripts
+in [sublime-text-
+installer](https://github.com/randy3k/sublime_text_installer).
 
 ### Installing Package Control
 
-If your package uses Package Control dependencies, you may want to install Package Control by umcommenting the line of `install_package_control` in [.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml).
+If your package uses Package Control dependencies, you may want to install
+Package Control by umcommenting the line of `install_package_control` in
+[.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml).
 
 
 ### Testing syntax_test files on CIs
 
-To enable testing of the syntax_test files, please copy the [.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml), 
-and use the `run_syntax_tests` in those files. Check [syntax](https://github.com/randy3k/UnitTesting-example/tree/syntax) branch for an example.
+To enable testing of the syntax_test files, please copy the
+[.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml), and use the
+`run_syntax_tests` in those files. Check [syntax](https://github.com/randy3k
+/UnitTesting-example/tree/syntax) branch for an example.
 
 
 Coverage and Coveralls.io
 ---
 
-To generate coverage report via [coveralls.io](https://coveralls.io/), you just have to specific three things in `.travis.yml`
+To generate coverage report via [coveralls.io](https://coveralls.io/), you
+just have to specific three things in `.travis.yml`
 
 1. install [python-coveralls](https://pypi.python.org/pypi/python-coveralls/)
 1. run the test will the `--coverage` flag
-```
-sh travis.sh run_tests --coverage
-```
+    ```
+    sh travis.sh run_tests --coverage
+    ```
+
 1. run `coveralls` after success
 
 Check [.travis.yml](.travis.yml) for details.
-
-
-Reloading Package
----
-
-If [PackageReloader](https://github.com/randy3k/PackageReloader) is installed, you could run the command `UnitTesting: Reload ....` to reload and run the current tests.
 
 
 Options
@@ -85,7 +107,9 @@ Options
 
 ### Use a different test directory
 
-The default test directory is "tests". To change the test directory, add a file `unittesting.json` to your repo with the corresponding directory name, eg `unittest`:
+The default test directory is "tests". To change the test directory, add a
+file `unittesting.json` to your repo with the corresponding directory name, eg
+`unittest`:
 
 ```
 {
@@ -95,7 +119,10 @@ The default test directory is "tests". To change the test directory, add a file 
 
 ### Redirect test result to a file
 
-The test result could be redirected to a file by specifying the `output` variable in `unittesting.json`. It can also be redirected to a temporary file by using `"output": "<tempfile>"`. The temporary file will be opened in the current window.
+The test result could be redirected to a file by specifying the `output`
+variable in `unittesting.json`. It can also be redirected to a temporary file
+by using `"output": "<tempfile>"`. The temporary file will be opened in the
+current window.
 
 ```
 {
@@ -106,11 +133,14 @@ The test result could be redirected to a file by specifying the `output` variabl
 ### Deferred testing
 Tests can also be written using the [deferrable testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness).
 
-It provides deferred testcases, such you are able to run sublime commands from your test cases and give control to sublime text and get it back later. Would be useful to test `sublime_plugin.EventListener`.
+It provides deferred testcases, such you are able to run sublime commands from
+your test cases and give control to sublime text and get it back later. Would
+be useful to test `sublime_plugin.EventListener`.
 
 A example would be found in [deferred](https://github.com/randy3k/UnitTesting-example/tree/deferred) branch.
 
-To activate deferred testing on travis and appveyor. Add the file `unittesting.json` to your repo with the following:
+To activate deferred testing on travis and appveyor. Add the file
+`unittesting.json` to your repo with the following:
 
 ```
 {
@@ -120,9 +150,14 @@ To activate deferred testing on travis and appveyor. Add the file `unittesting.j
 
 ### Async testing (ST 3 only)
 
-Tests are running in the main thread and blocking the UI. Asychronized testing could be used if you need the UI to respond. Async tests are usually slower than the sync tests because the UI takes time to repond. It is useful when there are non-blocking codes in the tests. A example would be found in [async](https://github.com/randy3k/UnitTesting-example/tree/async) branch.
+Tests are running in the main thread and blocking the UI. Asychronized testing
+could be used if you need the UI to respond. Async tests are usually slower
+than the sync tests because the UI takes time to repond. It is useful when
+there are non-blocking codes in the tests. A example would be found in
+[async](https://github.com/randy3k/UnitTesting-example/tree/async) branch.
 
-To activate async testing on travis and appveyor. Add the file `unittesting.json` to your repo with the following:
+To activate async testing on travis and appveyor. Add the file
+`unittesting.json` to your repo with the following:
 
 ```
 {
@@ -148,7 +183,9 @@ definitely want to check.
 
 ### Vagrant
 
-Debugging in travis-ci could be difficult. To mock the travis-ci environment in your computer, you can use [vagrant](http://www.vagrantup.com). For most users, this section could be ignored.
+Debugging in travis-ci could be difficult. To mock the travis-ci environment
+in your computer, you can use [vagrant](http://www.vagrantup.com). For most
+users, this section could be ignored.
 
 
 ```
