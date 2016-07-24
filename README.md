@@ -103,8 +103,9 @@ just have to specific three things in `.travis.yml`
 
 1. run `coveralls` after success
 
-Check [.travis.yml](.travis.yml) for details. [.coveragerc](.coveragerc) is
-used to control the coverage configuations.
+Check [.travis.yml](.travis.yml) for details. The file
+[.coveragerc](.coveragerc) is used to control the coverage configuations. If
+it is missing, UnitTesting would still ignore the `tests` directory.
 
 
 Options
