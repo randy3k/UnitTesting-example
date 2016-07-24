@@ -10,11 +10,9 @@ UnitTesting-example
 
 ------------
 
-This is an getting start example on using [UnitTesting](https://github.com/randy3k/UnitTesting) to test a sublime 2 and 3 package locally and via CI services such as [travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com).
+This is an simple example to use [UnitTesting](https://github.com/randy3k/UnitTesting) to test a Sublime Text package on a local machine and via continuous integration services such as [travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com). 
 
 For testing syntax_test files, go directly to [testing syntax_test files](README.md#testing-syntax_test-files).
-
-Install [PackageReloader](https://github.com/randy3k/PackageReloader) to reload the package automatically before running the tests.
 
 
 Preparation
@@ -33,26 +31,24 @@ Running Tests
 
 ### Local machine
 
-If the tests are written correctly and UnitTesting is installed, UnitTesting
-can be triggered via the command palette. Then in the input panel type your
-package name, in our case, `UnitTesting-example`. To run only tests in
-particular files, enter `<Package name>:<filename>`. `<filename>` should be a
-unix shell wildcard to match the file names, `<Package name>:test*.py` is used
-in default.
-
-<img src='https://raw.github.com/randy3k/UnitTesting-example/fig/cp.png' width='500'></img>
-
-The test results will be shown in the outout panel.
-
-<img src='https://raw.github.com/randy3k/UnitTesting-example/fig/op.png' width='500'></img>
+UnitTesting can be triggered via the command palette command `UnitTesting`.
+Enter the package name in the input panel and hit enter, a console should pop
+up and the tests should be running. To run only tests in particular files,
+enter `<Package name>:<filename>`. `<filename>` should be a unix shell
+wildcard to match the file names, `<Package name>:test*.py` is used in
+default.
 
 There are also quick commands to run tests of the current project or file. If
 [PackageReloader](https://github.com/randy3k/PackageReloader) is installed,
-you could run the command `UnitTesting: Reload ....` to reload and run the
+you could run the command `UnitTesting: Reload and Test ...` to reload and run the
 current tests.
+
+<img src='https://raw.github.com/randy3k/UnitTesting-example/fig/local.gif' width='600'></img>
+
 
 Besides the test results, UnitTesting also provides commands to check test coverage
 via [coverage](https://pypi.python.org/pypi/coverage).
+
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/coverage.png' width='500'></img>
 
 
@@ -74,7 +70,7 @@ Installation of Sublime Text on Travis and Appveyor are handled by the scripts
 in [sublime-text-
 installer](https://github.com/randy3k/sublime_text_installer).
 
-### Installing Package Control
+### Installing Package Control and Dependencies
 
 If your package uses Package Control dependencies, you may want to install
 Package Control by umcommenting the line of `install_package_control` in
@@ -92,7 +88,7 @@ To enable testing of the syntax_test files, please copy the
 Coverage and Coveralls.io
 ---
 
-To generate coverage report via [coveralls.io](https://coveralls.io/), you
+To generate coverage report for [coveralls.io](https://coveralls.io/), you
 just have to specific three things in `.travis.yml`
 
 1. install [python-coveralls](https://pypi.python.org/pypi/python-coveralls/)
