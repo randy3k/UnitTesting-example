@@ -5,5 +5,5 @@
     "deferred": false,
     "verbosity": 2,
     "output": "<panel>",
-    "coverage": false
+    "coverage": true
 }

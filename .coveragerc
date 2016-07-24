@@ -1,2 +1,2 @@
-[omit]
-    */tests/*
+[run]
+omit = */tests/*
