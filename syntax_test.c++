@@ -13,7 +13,7 @@
 //     ^ punctuation.definition.comment.c
 
 #include "stdio.h"
-// <- meta.preprocessor.c.include
+// <- meta.preprocessor.include.c
 //       ^ meta string punctuation.definition.string.begin
 //               ^ meta string punctuation.definition.string.end
 int square(int x)
