@@ -40,14 +40,17 @@ default.
 
 There are also quick commands to run tests of the current project or file. If
 [PackageReloader](https://github.com/randy3k/PackageReloader) is installed,
-you could run the command `UnitTesting: Reload and Test ...` to reload and run the
-current tests.
+you could run the command `UnitTesting: Test Current Project (Reload)` to
+reload and run the current project.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/local.gif' width='600'></img>
 
 
-Besides the test results, UnitTesting also provides commands to check test coverage
-via [coverage](https://pypi.python.org/pypi/coverage).
+Besides the test results, UnitTesting also provides a command
+`UnitTesting: Test Current Project (Coverage)` to check test
+coverage via [coverage](https://pypi.python.org/pypi/coverage) (avaiable on
+Sublime Text 3, Linux/MacOS, if
+[PackageReloader](https://github.com/randy3k/PackageReloader) is installed).
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/coverage.png' width='500'></img>
 
@@ -102,6 +105,7 @@ just have to specific three things in `.travis.yml`
 Check [.travis.yml](.travis.yml) for details. The file
 [.coveragerc](.coveragerc) is used to control the coverage configuations. If
 it is missing, UnitTesting would still ignore the `tests` directory.
+This feature should be enabled for Sublime Text 3 only.
 
 
 Options
