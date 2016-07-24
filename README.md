@@ -51,6 +51,10 @@ There are also quick commands to run tests of the current project or file. If
 you could run the command `UnitTesting: Reload ....` to reload and run the
 current tests.
 
+Besides the test results, UnitTesting also provides commands to check test coverage
+via [coverage](https://pypi.python.org/pypi/coverage).
+<img src='https://raw.github.com/randy3k/UnitTesting-example/fig/coverage.png' width='500'></img>
+
 
 ### Travis and Appveyor
 
