@@ -4,7 +4,7 @@ UnitTesting-example
 [![Build Status](https://travis-ci.org/randy3k/UnitTesting-example.svg?branch=master)](https://travis-ci.org/randy3k/UnitTesting-example) 
 [![Build status](https://ci.appveyor.com/api/projects/status/9nnjlnj6tetbxuqd/branch/master?svg=true)](https://ci.appveyor.com/project/randy3k/unittesting-example/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/randy3k/UnitTesting-example/badge.svg?branch=master)](https://coveralls.io/github/randy3k/UnitTesting-example?branch=coverage)
-<a href="https://packagecontrol.io/packages/UnitTesting-example"><img src="https://packagecontrol.herokuapp.com/downloads/UnitTesting-example.svg"></a>
+
 
 ------------
 
@@ -57,6 +57,21 @@ If your package uses Package Control dependencies, you may want to install Packa
 
 To enable testing of the syntax_test files, please copy the [.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml), 
 and use the `run_syntax_tests` in those files. Check [syntax](https://github.com/randy3k/UnitTesting-example/tree/syntax) branch for an example.
+
+
+Coverage and Coveralls.io
+---
+
+To generate coverage report via [coveralls.io](https://coveralls.io/), you just have to specific three things in `.travis.yml`
+
+1. install [python-coveralls](https://pypi.python.org/pypi/python-coveralls/)
+1. run the test will the `--coverage` flag
+```
+sh travis.sh run_tests --coverage
+```
+1. run `coveralls` after success
+
+Check [.travis.yml](.travis.yml) for details.
 
 
 Reloading Package
