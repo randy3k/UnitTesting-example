@@ -94,12 +94,12 @@ Coverage and Coveralls.io
 To generate coverage report for [coveralls.io](https://coveralls.io/), you
 just have to specific three things in `.travis.yml`
 
-1. install [python-coveralls](https://pypi.python.org/pypi/python-coveralls/)
 1. run the test with the `--coverage` flag
     ```
     sh travis.sh run_tests --coverage
     ```
 
+1. install [python-coveralls](https://pypi.python.org/pypi/python-coveralls/)
 1. run `coveralls` after success
 
 Check [.travis.yml](.travis.yml) for details. The file
