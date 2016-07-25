@@ -1,5 +1,4 @@
-UnitTesting-example
-===================
+# UnitTesting-example
 
 [![Build Status](https://travis-ci.org/randy3k/UnitTesting-example.svg?branch=master)](https://travis-ci.org/randy3k/UnitTesting-example) 
 [![Build status](https://ci.appveyor.com/api/projects/status/9nnjlnj6tetbxuqd/branch/master?svg=true)](https://ci.appveyor.com/project/randy3k/unittesting-example/branch/master)
@@ -15,8 +14,8 @@ This is an simple example to use [UnitTesting](https://github.com/randy3k/UnitTe
 For testing syntax_test files, go directly to [testing syntax_test files](README.md#testing-syntax_test-files-on-cis).
 
 
-Preparation
----
+### Preparation
+
 1. Before testing anything, you have to install [UnitTesting](https://github.com/randy3k/UnitTesting) via Package Control or clone it from [source](https://github.com/randy3k/UnitTesting).
 2. Your package! In our case, it is [helloworld.py](helloworld.py)
 3. You also have to know how to write unittest testcases. TestCases should be placed in `test*.py` under the directory `tests` (configurable, see below). They are loaded by a modified [TestLoader](https://github.com/randy3k/UnitTesting/blob/master/unittesting/core/loader.py).
@@ -26,10 +25,10 @@ Preparation
 
 
 
-Running Tests
+### Running Tests
 ----
 
-### Local machine
+#### Local machine
 
 UnitTesting can be triggered via the command palette command `UnitTesting`.
 Enter the package name in the input panel and hit enter, a console should pop
@@ -55,7 +54,7 @@ Sublime Text 3, Linux/MacOS, if
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/coverage.png' width='500'></img>
 
 
-### Travis and Appveyor
+#### Travis and Appveyor
 
 If the tests can be run locally, let's put them to travis-ci and let travis-ci
 takes care of them. First, you have to copy a important file:
@@ -73,7 +72,7 @@ Installation of Sublime Text on Travis and Appveyor are handled by the scripts
 in [sublime-text-
 installer](https://github.com/randy3k/sublime_text_installer).
 
-### Installing Package Control and Dependencies
+#### Installing Package Control and Dependencies
 
 If your package uses Package Control dependencies, you may want to install
 Package Control by umcommenting the line of `install_package_control` in
@@ -88,8 +87,7 @@ To enable testing of the syntax_test files, please copy the
 /UnitTesting-example/tree/syntax) branch for an example.
 
 
-Coverage and Coveralls.io
----
+### Coverage and Coveralls.io
 
 To generate coverage report for [coveralls.io](https://coveralls.io/), you
 just have to specific three things in `.travis.yml`
@@ -108,10 +106,9 @@ it is missing, UnitTesting would still ignore the `tests` directory.
 This feature should be enabled for Sublime Text 3 only.
 
 
-Options
-----
+### Options
 
-### Use a different test directory
+##### Use a different test directory
 
 The default test directory is "tests". To change the test directory, add a
 file `unittesting.json` to your repo with the corresponding directory name, eg
@@ -123,7 +120,7 @@ file `unittesting.json` to your repo with the corresponding directory name, eg
 }
 ```
 
-### Redirect test result to a file
+#### Redirect test result to a file
 
 The test result could be redirected to a file by specifying the `output`
 variable in `unittesting.json`. It can also be redirected to a temporary file
@@ -136,7 +133,7 @@ current window.
 }
 ```
 
-### Deferred testing
+#### Deferred testing
 Tests can also be written using the [deferrable testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness).
 
 It provides deferred testcases, such you are able to run sublime commands from
@@ -154,7 +151,7 @@ To activate deferred testing on travis and appveyor. Add the file
 }
 ```
 
-### Async testing (ST 3 only)
+#### Async testing (ST 3 only)
 
 Tests are running in the main thread and blocking the UI. Asychronized testing
 could be used if you need the UI to respond. Async tests are usually slower
