@@ -123,9 +123,7 @@ file `unittesting.json` to your repo with the corresponding directory name, eg
 #### Redirect test result to a file
 
 The test result could be redirected to a file by specifying the `output`
-variable in `unittesting.json`. It can also be redirected to a temporary file
-by using `"output": "<tempfile>"`. The temporary file will be opened in the
-current window.
+variable in `unittesting.json`.
 
 ```
 {
