@@ -83,8 +83,8 @@ Package Control by umcommenting the line of `install_package_control` in
 
 To enable testing of the syntax_test files, please copy the
 [.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml), and use the
-`run_syntax_tests` in those files. Check [syntax](https://github.com/randy3k
-/UnitTesting-example/tree/syntax) branch for an example.
+`run_syntax_tests` in those files. Check 
+[syntax](https://github.com/randy3k/UnitTesting-example/tree/syntax) branch for an example.
 
 
 ### Coverage and Coveralls.io
