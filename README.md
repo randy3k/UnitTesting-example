@@ -9,7 +9,12 @@
 
 ------------
 
-This is an simple example to use [UnitTesting](https://github.com/randy3k/UnitTesting) to test a Sublime Text package on a local machine and via continuous integration services such as [travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com). 
+This is an simple example to use
+[UnitTesting](https://github.com/randy3k/UnitTesting) to test a Sublime Text
+package on a local machine and via continuous integration services such as
+[travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com). It
+also provides `DeferrableTestCase` to allow interacting with the graphic
+interface and processing GUI events.
 
 For testing syntax_test files, go directly to [testing syntax_test files](README.md#testing-syntax_test-files-on-cis).
 
@@ -72,22 +77,7 @@ Installation of Sublime Text on Travis and Appveyor are handled by the scripts
 in [sublime-text-
 installer](https://github.com/randy3k/sublime_text_installer).
 
-#### Installing Package Control and Dependencies
-
-If your package uses Package Control dependencies, you may want to install
-Package Control by umcommenting the line of `install_package_control` in
-[.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml).
-
-
-### Testing syntax_test files on CIs
-
-To enable testing of the syntax_test files, please copy the
-[.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml), and use the
-`run_syntax_tests` in those files. Check 
-[syntax](https://github.com/randy3k/UnitTesting-example/tree/syntax) branch for an example.
-
-
-### Coverage and Coveralls.io
+#### Coverage and Coveralls.io support on Travis.
 
 To generate coverage report for [coveralls.io](https://coveralls.io/), you
 just have to specific three things in `.travis.yml`
@@ -104,6 +94,21 @@ Check [.travis.yml](.travis.yml) for details. The file
 [.coveragerc](.coveragerc) is used to control the coverage configuations. If
 it is missing, UnitTesting would still ignore the `tests` directory.
 This feature should be enabled for Sublime Text 3 only.
+
+#### Installing Package Control and Dependencies
+
+If your package uses Package Control dependencies, you may want to install
+Package Control by umcommenting the line of `install_package_control` in
+[.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml).
+
+
+#### Testing syntax_test files on CIs
+
+To enable testing of the syntax_test files, please copy the
+[.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml), and use the
+`run_syntax_tests` in those files. Check [syntax](https://github.com/randy3k
+/UnitTesting-example/tree/syntax) branch for an example.
+
 
 
 ### Options
@@ -136,7 +141,8 @@ Tests can also be written using the [deferrable testcase](https://bitbucket.org/
 
 It provides deferred testcases, such you are able to run sublime commands from
 your test cases and give control to sublime text and get it back later. Would
-be useful to test `sublime_plugin.EventListener`.
+be useful to test `sublime_plugin.EventListener`. To make deferred tests, you
+will need `DeferrableTestCase`.
 
 A example would be found in [deferred](https://github.com/randy3k/UnitTesting-example/tree/deferred) branch.
 
@@ -156,6 +162,7 @@ could be used if you need the UI to respond. Async tests are usually slower
 than the sync tests because the UI takes time to repond. It is useful when
 there are non-blocking codes in the tests. A example would be found in
 [async](https://github.com/randy3k/UnitTesting-example/tree/async) branch.
+Only consider this option if deferred testing does not work for you.
 
 To activate async testing on travis and appveyor. Add the file
 `unittesting.json` to your repo with the following:
