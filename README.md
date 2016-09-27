@@ -53,7 +53,7 @@ reload and run the current project.
 Besides the test results, UnitTesting also provides a command
 `UnitTesting: Test Current Project (Coverage)` to check test
 coverage via [coverage](https://pypi.python.org/pypi/coverage) (avaiable on
-Sublime Text 3, Linux/MacOS, if
+Sublime Text 3, if
 [PackageReloader](https://github.com/randy3k/PackageReloader) is installed).
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/coverage.png' width='500'></img>

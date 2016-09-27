@@ -6,7 +6,7 @@ sudo: required
 
 env:
     global:
-        # Your package name
+        # The package name
         - PACKAGE="UnitTesting-example"
     matrix:
         - SUBLIME_TEXT_VERSION="2"
@@ -27,7 +27,10 @@ install:
     # - sh travis.sh install_package_control
 
 script:
+    # run tests with test coverage report
     - sh travis.sh run_tests --coverage
+    # run tests without test coverage report
+    # - sh travis.sh run_tests
     # testing syntax_test files
     # - sh travis.sh run_syntax_tests
 
