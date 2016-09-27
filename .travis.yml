@@ -2,8 +2,6 @@ os:
     - linux
     - osx
 
-sudo: required
-
 env:
     global:
         # The package name
@@ -37,7 +35,7 @@ script:
 after_success:
     # remove this line if don't need coveralls
     - if [ "$SUBLIME_TEXT_VERSION" == "3" ]; then
-            sudo pip install python-coveralls;
+            pip install --user python-coveralls;
             coveralls;
       fi
 
