@@ -73,10 +73,6 @@ your repo, change the `PACKAGE` variable in [appveyor.yml](appveyor.yml). The
 last but not least, login [appveyor](http://www.appveyor.com) to add your repo
 as a project.
 
-Installation of Sublime Text on Travis and Appveyor are handled by the scripts
-in [sublime-text-
-installer](https://github.com/randy3k/sublime_text_installer).
-
 #### Coverage and Coveralls.io support on Travis.
 
 To generate coverage report for [coveralls.io](https://coveralls.io/), you
