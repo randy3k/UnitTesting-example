@@ -42,19 +42,17 @@ enter `<Package name>:<filename>`. `<filename>` should be a unix shell
 wildcard to match the file names, `<Package name>:test*.py` is used in
 default.
 
-There are also quick commands to run tests of the current project or file. If
-[PackageReloader](https://github.com/randy3k/PackageReloader) is installed,
-you could run the command `UnitTesting: Test Current Project (Reload)` to
+If [PackageReloader](https://github.com/randy3k/PackageReloader) is installed,
+you could run the command `UnitTesting: Reload and Test Current Project` to
 reload and run the current project.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/local.gif' width='600'></img>
 
 
 Besides the test results, UnitTesting also provides a command
-`UnitTesting: Test Current Project (Coverage)` to check test
-coverage via [coverage](https://pypi.python.org/pypi/coverage) (avaiable on
-Sublime Text 3, if
-[PackageReloader](https://github.com/randy3k/PackageReloader) is installed).
+`UnitTesting: Test Current Project with Coverage` to check test
+coverage via [coverage](https://pypi.python.org/pypi/coverage) (if
+[PackageReloader](https://github.com/randy3k/PackageReloader) is also installed).
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/coverage.png' width='500'></img>
 
