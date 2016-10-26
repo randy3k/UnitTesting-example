@@ -13,7 +13,7 @@ This is an simple example to use
 [UnitTesting](https://github.com/randy3k/UnitTesting) to test a Sublime Text
 package on a local machine and via continuous integration services such as
 [travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com). It
-also provides `DeferrableTestCase` to allow interacting with the graphic
+also provides `DeferrableTestCase` to allow testing asynchronous codes and interacting with the graphic
 interface and processing GUI events.
 
 For testing syntax_test files, go directly to [testing syntax_test files](README.md#testing-syntax_test-files-on-cis).
@@ -135,7 +135,7 @@ Tests can also be written using the [deferrable testcase](https://bitbucket.org/
 
 It provides deferred testcases, such you are able to run sublime commands from
 your test cases and give control to sublime text and get it back later. Would
-be useful to test `sublime_plugin.EventListener`. To make deferred tests, you
+be useful to test asynchronous codes. To make deferred tests, you
 will need `DeferrableTestCase`.
 
 A example would be found in [deferred](https://github.com/randy3k/UnitTesting-example/tree/deferred) branch.
@@ -151,11 +151,12 @@ To activate deferred testing on travis and appveyor. Add the file
 
 #### Async testing (ST 3 only)
 
-Tests are running in the main thread and blocking the UI. Asychronized testing
-could be used if you need the UI to respond. Async tests are usually slower
-than the sync tests because the UI takes time to repond. It is useful when
-there are non-blocking codes in the tests. A example would be found in
-[async](https://github.com/randy3k/UnitTesting-example/tree/async) branch.
+Tests are running in the main thread and blocking the graphic inference.
+Asychronized testing could be used if you need the interface to respond. Async
+tests are usually slower than the sync tests because the interface takes time
+to repond. It is useful when there are non-blocking codes in the tests. A
+example would be found in 
+[async](https://github.com/randy3k/UnitTesting-example/tree/async) branch. 
 Only consider this option if deferred testing does not work for you.
 
 To activate async testing on travis and appveyor. Add the file
