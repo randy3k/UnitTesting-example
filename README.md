@@ -131,12 +131,10 @@ variable in `unittesting.json`.
 ```
 
 #### Deferred testing
-Tests can also be written using the [deferrable testcase](https://bitbucket.org/klorenz/sublimepluginunittestharness).
 
-It provides deferred testcases, such you are able to run sublime commands from
-your test cases and give control to sublime text and get it back later. Would
-be useful to test asynchronous codes. To make deferred tests, you
-will need `DeferrableTestCase`.
+Tests can also be written using the deferrable testcase, such that you are
+able to run sublime commands from your test cases and yield control to sublime
+text and get it back later. Would be useful to test asynchronous codes.
 
 A example would be found in [deferred](https://github.com/randy3k/UnitTesting-example/tree/deferred) branch.
 
@@ -151,13 +149,15 @@ To activate deferred testing on travis and appveyor. Add the file
 
 #### Async testing (ST 3 only)
 
-Tests are running in the main thread and blocking the graphic inference.
-Asychronized testing could be used if you need the interface to respond. Async
-tests are usually slower than the sync tests because the interface takes time
-to repond. It is useful when there are non-blocking codes in the tests. A
-example would be found in 
-[async](https://github.com/randy3k/UnitTesting-example/tree/async) branch. 
-Only consider this option if deferred testing does not work for you.
+In default, the tests are running in the main thread and can be blocking the
+graphic inference. Asychronized testing could be used if you need the
+interface to respond. 
+
+Async tests are usually slower than the sync tests
+because the interface takes time to repond. It is useful when there are non-
+blocking codes in the tests. A example would be found in
+[async](https://github.com/randy3k/UnitTesting-example/tree/async) branch.
+
 
 To activate async testing on travis and appveyor. Add the file
 `unittesting.json` to your repo with the following:
