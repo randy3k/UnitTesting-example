@@ -12,9 +12,7 @@
 This is an simple example to use
 [UnitTesting](https://github.com/randy3k/UnitTesting) to test a Sublime Text
 package on a local machine and via continuous integration services such as
-[travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com). It
-also provides `DeferrableTestCase` to allow testing asynchronous codes and interacting with the graphic
-interface and processing GUI events.
+[travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com).
 
 For testing syntax_test files, go directly to [testing syntax_test files](README.md#testing-syntax_test-files-on-cis).
 
