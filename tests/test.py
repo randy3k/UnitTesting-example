@@ -2,18 +2,17 @@ import sublime
 from unittest import TestCase
 import time
 
-version = sublime.version()
-
 
 # for testing sublime command
-class test_helloworld_command(TestCase):
+class TestAsync(TestCase):
 
     def test_hello_world(self):
-        foo = [0]
+        done = False
 
         def delay():
-            foo[0] = 1
+            nonlocal done
+            done = True
 
         sublime.set_timeout(delay, 1000)
         time.sleep(2)
-        self.assertEqual(foo[0], 1)
+        self.assertTrue(done)
