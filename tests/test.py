@@ -6,7 +6,7 @@ version = sublime.version()
 
 
 # for testing sublime command
-class test_helloworld_command(TestCase):
+class TestHelloWorld(TestCase):
 
     def setUp(self):
         self.view = sublime.active_window().new_file()
@@ -26,7 +26,8 @@ class test_helloworld_command(TestCase):
     def getRow(self, row):
         return self.view.substr(self.view.line(self.view.text_point(row, 0)))
 
-    # since ST2 doesn't support unittest.skip, we have to do primitive skipping
+    # since ST3 uses python 2 and python 2 doesn't support @unittest.skip,
+    # we have to do primitive skipping
     if version >= '3000':
         def test_hello_world_st3(self):
             self.view.run_command("hello_world")
@@ -49,7 +50,7 @@ else:
     helloworld = sys.modules["UnitTesting-example.helloworld"]
 
 
-class test_internal_functions(TestCase):
+class TestFunctions(TestCase):
 
     def test_foo(self):
         x = helloworld.foo(1)
