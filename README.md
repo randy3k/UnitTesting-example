@@ -170,6 +170,7 @@ Note:
 
 1. `async` is forced to be `false` on ST2
 2. if `async` is true, `deferred` is forced to be `false`.
+3. it is known that async test does not work very well with coverage.
 
 
 ### Troubleshooting
