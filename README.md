@@ -6,4 +6,4 @@ Linux & OSX | Windows
 
 Example of a blocking testcase.
 
-In [test.py](tests/test.py), `time.sleep(2)` will block Sublime Text and `delay` wouldn't have a chance to be run before the line of assertion. Therefore, the option of `async` will be necessary.
+In [test.py](tests/test.py), `time.sleep(1)` will block Sublime Text and `async_insert_hello_world` wouldn't have a chance to be execulated before the line of assertion. Therefore, the option of `async` will be necessary.
