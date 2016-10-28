@@ -17,7 +17,7 @@ package on a local machine and via continuous integration services such as
 For testing syntax_test files, go directly to [testing syntax_test files](README.md#testing-syntax_test-files-on-cis).
 
 
-### Preparation
+## Preparation
 
 1. Before testing anything, you have to install [UnitTesting](https://github.com/randy3k/UnitTesting) via Package Control or clone it from [source](https://github.com/randy3k/UnitTesting).
 2. Your package! In our case, it is [helloworld.py](helloworld.py)
@@ -28,10 +28,9 @@ For testing syntax_test files, go directly to [testing syntax_test files](README
 
 
 
-### Running Tests
-----
+## Running Tests
 
-#### Local machine
+### Local machine
 
 UnitTesting can be triggered via the command palette command `UnitTesting`.
 Enter the package name in the input panel and hit enter, a console should pop
@@ -39,6 +38,8 @@ up and the tests should be running. To run only tests in particular files,
 enter `<Package name>:<filename>`. `<filename>` should be a unix shell
 wildcard to match the file names, `<Package name>:test*.py` is used in
 default.
+
+
 
 If [PackageReloader](https://github.com/randy3k/PackageReloader) is installed,
 you could run the command `UnitTesting: Reload and Test Current Project` to
@@ -55,7 +56,7 @@ coverage via [coverage](https://pypi.python.org/pypi/coverage) (if
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/coverage.png' width='500'></img>
 
 
-#### Travis and Appveyor
+### Travis and Appveyor
 
 If the tests can be run locally, let's put them to travis-ci and let travis-ci
 takes care of them. First, you have to copy a important file:
@@ -69,7 +70,7 @@ your repo, change the `PACKAGE` variable in [appveyor.yml](appveyor.yml). The
 last but not least, login [appveyor](http://www.appveyor.com) to add your repo
 as a project.
 
-#### Coverage and Coveralls.io support on Travis.
+### Coverage and Coveralls.io support on Travis.
 
 To generate coverage report for [coveralls.io](https://coveralls.io/), you
 just have to specific three things in `.travis.yml`
@@ -87,14 +88,14 @@ Check [.travis.yml](.travis.yml) for details. The file
 it is missing, UnitTesting would still ignore the `tests` directory.
 This feature should be enabled for Sublime Text 3 only.
 
-#### Installing Package Control and Dependencies
+### Installing Package Control and Dependencies
 
 If your package uses Package Control dependencies, you may want to install
 Package Control by umcommenting the line of `install_package_control` in
 [.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml).
 
 
-#### Testing syntax_test files on CIs
+### Testing syntax_test files on CIs
 
 To enable testing of the syntax_test files, please copy the
 [.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml), and use the
@@ -103,9 +104,9 @@ To enable testing of the syntax_test files, please copy the
 
 
 
-### Options
+## Options
 
-##### Use a different test directory
+### Use a different test directory
 
 The default test directory is "tests". To change the test directory, add a
 file `unittesting.json` to your repo with the corresponding directory name, eg
@@ -117,7 +118,7 @@ file `unittesting.json` to your repo with the corresponding directory name, eg
 }
 ```
 
-#### Redirect test result to a file
+### Redirect test result to a file
 
 The test result could be redirected to a file by specifying the `output`
 variable in `unittesting.json`.
@@ -128,11 +129,12 @@ variable in `unittesting.json`.
 }
 ```
 
-#### Deferred testing
+### Deferred testing
 
-Tests can also be written using the deferrable testcase, such that you are
+Tests can also be written using the Deferrable testcase, such that you are
 able to run sublime commands from your test cases and yield control to sublime
-text and get it back later. Would be useful to test asynchronous codes.
+text runtime and continue the execution later. Would be useful to test
+asynchronous codes.
 
 A example would be found in [deferred](https://github.com/randy3k/UnitTesting-example/tree/deferred) branch.
 
@@ -145,16 +147,19 @@ To activate deferred testing on travis and appveyor. Add the file
 }
 ```
 
-#### Async testing (ST 3 only)
+### Async testing (Sublime Text 3)
 
-In default, the tests are running in the main thread and can be blocking the
+In default, the tests are running in the main thread and can block the
 graphic inference. Asychronized testing could be used if you need the
 interface to respond. 
 
-Async tests are usually slower than the sync tests
-because the interface takes time to repond. It is useful when there are non-
-blocking codes in the tests. A example would be found in
-[async](https://github.com/randy3k/UnitTesting-example/tree/async) branch.
+Async tests are usually slower than the sync tests because the interface takes
+time to repond but it is useful when there are blocking codes in the tests. A
+example would be found in 
+[async](https://github.com/randy3k/UnitTesting-example/tree/async) branch. 
+
+It is known that async test does not work very well with coverage, and
+deferred testing usually performs better than async testing.
 
 
 To activate async testing on travis and appveyor. Add the file
@@ -168,12 +173,11 @@ To activate async testing on travis and appveyor. Add the file
 
 Note: 
 
-1. `async` is forced to be `false` on ST2
-2. if `async` is true, `deferred` is forced to be `false`.
-3. it is known that async test does not work very well with coverage.
+1. `async` is forced to be `false` on Sublime Text 2
+2. if `async` is true, `deferred` is forced to be `false` (relaxation of this is in progress)
 
 
-### Troubleshooting
+## Troubleshooting
 
 If you keep encountering unexpected errors, you may want to check the
 `close_windows_when_empty` setting. I have spent at least a few hours to
@@ -183,7 +187,8 @@ However, if you are using deferred or async testcases, this is something you
 definitely want to check.
 
 
-### Vagrant
+## Vagrant (**Outdated**)
+
 
 Debugging in travis-ci could be difficult. To mock the travis-ci environment
 in your computer, you can use [vagrant](http://www.vagrantup.com). For most
