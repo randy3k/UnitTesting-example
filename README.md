@@ -19,12 +19,10 @@ For testing syntax_test files, go directly to [testing syntax_test files](README
 
 ## Preparation
 
-1. Before testing anything, you have to install [UnitTesting](https://github.com/randy3k/UnitTesting) via Package Control or clone it from [source](https://github.com/randy3k/UnitTesting).
+1. Before testing anything, you have to install [UnitTesting](https://github.com/randy3k/UnitTesting) via Package Control.
 2. Your package! In our case, it is [helloworld.py](helloworld.py)
-3. You also have to know how to write unittest testcases. TestCases should be placed in `test*.py` under the directory `tests` (configurable, see below). They are loaded by a modified [TestLoader](https://github.com/randy3k/UnitTesting/blob/master/unittesting/core/loader.py).
-    - ST2 developers should read [this](http://docs.python.org/2.6/library/unittest.html) for unittest documentation.
-    - ST3 developers should read [this](http://docs.python.org/3.3/library/unittest.html). 
-    - You may also want to look that the file [test.py](tests/test.py) under the `tests` directory for the minimal example.
+3. TestCases should be placed in `test*.py` under the directory `tests` (configurable, see below). They are loaded by a modified [TestLoader](https://github.com/randy3k/UnitTesting/blob/master/unittesting/core/loader.py), see [TestLoader.discover](https://docs.python.org/3.3/library/unittest.html#unittest.TestLoader.discover) for more details. (Sublime Text 2 developers should read [this](http://docs.python.org/2.6/library/unittest.html) for unittest documentation).
+4. Take a look of the file [test.py](tests/test.py) under the `tests` directory for a minimal example.
 
 
 
@@ -40,6 +38,7 @@ wildcard to match the file names, `<Package name>:test*.py` is used in
 default.
 
 
+### Reload and coverage
 
 If [PackageReloader](https://github.com/randy3k/PackageReloader) is installed,
 you could run the command `UnitTesting: Reload and Test Current Project` to
@@ -47,11 +46,9 @@ reload and run the current project.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/local.gif' width='600'></img>
 
-
-Besides the test results, UnitTesting also provides a command
-`UnitTesting: Test Current Project with Coverage` to check test
-coverage via [coverage](https://pypi.python.org/pypi/coverage) (if
-[PackageReloader](https://github.com/randy3k/PackageReloader) is also installed).
+Furthermore, it is also possible to check test
+coverage via [coverage](https://pypi.python.org/pypi/coverage). The corresponding command is
+`UnitTesting: Test Current Project with Coverage`.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/coverage.png' width='500'></img>
 
@@ -72,6 +69,8 @@ as a project.
 
 ### Coverage and Coveralls.io support on Travis.
 
+*This feature is Sublime Text 3 only*
+
 To generate coverage report for [coveralls.io](https://coveralls.io/), you
 just have to specific three things in `.travis.yml`
 
@@ -85,8 +84,7 @@ just have to specific three things in `.travis.yml`
 
 Check [.travis.yml](.travis.yml) for details. The file
 [.coveragerc](.coveragerc) is used to control the coverage configuations. If
-it is missing, UnitTesting would still ignore the `tests` directory.
-This feature should be enabled for Sublime Text 3 only.
+it is missing, UnitTesting will ignore the `tests` directory.
 
 ### Installing Package Control and Dependencies
 
@@ -95,7 +93,7 @@ Package Control by umcommenting the line of `install_package_control` in
 [.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml).
 
 
-### Testing syntax_test files on CIs
+### Testing syntax_test files
 
 To enable testing of the syntax_test files, please copy the
 [.travis.yml](.travis.yml) or [appveyor.yml](appveyor.yml), and use the
@@ -176,15 +174,6 @@ Note:
 1. `async` is forced to be `false` on Sublime Text 2
 2. if `async` is true, `deferred` is forced to be `false` (relaxation of this is in progress)
 
-
-## Troubleshooting
-
-If you keep encountering unexpected errors, you may want to check the
-`close_windows_when_empty` setting. I have spent at least a few hours to
-realize this was the cause of a error. The `true` value would close the last
-window if there is no view. It is fine if you are running blocking code.
-However, if you are using deferred or async testcases, this is something you
-definitely want to check.
 
 
 ## Vagrant (**Outdated**)
