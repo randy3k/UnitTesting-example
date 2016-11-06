@@ -38,11 +38,17 @@ wildcard to match the file names, `<Package name>:test*.py` is used in
 default.
 
 
-### Reload and coverage
+### Reload, Test and Coverage
 
-If [PackageReloader](https://github.com/randy3k/PackageReloader) is installed,
-you could run the command `UnitTesting: Reload and Test Current Project` to
-reload and run the current project.
+* For Sublime Text 3*
+
+Sublime Text package developers may find themselves have to close and re-open
+the software multiple times when developing a package. The command
+`UnitTesting: Reload Current Project` would reload the current project so
+developers do not have to restart Sublime Text.
+
+You could run the command `UnitTesting: Test Current Project` to run the current project. 
+The current project will be first reloaded by UnitTesting and then the tests will be run.
 
 <img src='https://raw.github.com/randy3k/UnitTesting-example/fig/local.gif' width='600'></img>
 
