@@ -38,9 +38,7 @@ wildcard to match the file names, `<Package name>:test*.py` is used in
 default.
 
 
-### Reload, Test and Coverage
-
-* For Sublime Text 3*
+### Reload, Test and Coverage (*For Sublime Text 3*)
 
 Sublime Text package developers may find themselves have to close and re-open
 the software multiple times when developing a package. The command
@@ -73,9 +71,7 @@ your repo, change the `PACKAGE` variable in [appveyor.yml](appveyor.yml). The
 last but not least, login [appveyor](http://www.appveyor.com) to add your repo
 as a project.
 
-### Coverage and Coveralls.io support on Travis.
-
-*This feature is Sublime Text 3 only*
+### Coverage and Coveralls.io support on Travis  (*For Sublime Text 3*)
 
 To generate coverage report for [coveralls.io](https://coveralls.io/), you
 just have to specific three things in `.travis.yml`
@@ -151,7 +147,7 @@ To activate deferred testing on travis and appveyor. Add the file
 }
 ```
 
-### Async testing (Sublime Text 3)
+### Async testing (*For Sublime Text 3*)
 
 In default, the tests are running in the main thread and can block the
 graphic inference. Asychronized testing could be used if you need the
