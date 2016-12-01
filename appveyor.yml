@@ -15,6 +15,27 @@ install:
 build: off
 
 test_script:
-    - ps: .\appveyor.ps1 "run_tests" -verbose
+
+    # run tests with test coverage report
+    - ps: .\appveyor.ps1 "run_tests" -coverage -verbose
+    # run tests without test coverage report
+    # - ps: .\appveyor.ps1 "run_tests" -verbose
     # testing syntax_test files
     # - ps: .\appveyor.ps1 "run_syntax_tests" -verbose
+
+# this is disabled by default
+#    1. coveralls.io doesn't support grouping appveyor sub-builds
+#    2. travis and appveyor reports are not merged automatically
+# on_success:
+#     # remember to set the encrypted variable COVERALLS_REPO_TOKEN.
+#     - cmd: SET COVERALLS_SERVICE_NAME=appveyor
+#     - cmd: SET TRAVIS_JOB_ID=%APPVEYOR_BUILD_ID%
+#     - cmd: SET TRAVIS_BRANCH=%APPVEYOR_REPO_BRANCH%
+#     - cmd: SET PYTHON=C:\Python33
+#     - cmd: SET PATH=%PYTHON%;%PYTHON%\Scripts;%PATH%
+#     - ps: |
+#         if (${env:SUBLIME_TEXT_VERSION} -eq 3) {
+#             pip install python-coveralls
+#             coveralls 2>&1 | %{ "$_" }
+#             write-host
+#         }
