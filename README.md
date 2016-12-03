@@ -47,14 +47,12 @@ developers do not have to restart Sublime Text.
 
 You could run the command `UnitTesting: Test Current Project` to run the current project. 
 The current project will be first reloaded by UnitTesting and then the tests will be run.
-
-<img src='https://raw.github.com/randy3k/UnitTesting-example/fig/local.gif' width='600'></img>
-
 Furthermore, it is also possible to check test
 coverage via [coverage](https://pypi.python.org/pypi/coverage). The corresponding command is
 `UnitTesting: Test Current Project with Coverage`.
 
-<img src='https://raw.github.com/randy3k/UnitTesting-example/fig/coverage.png' width='500'></img>
+<img src='https://cloud.githubusercontent.com/assets/1690993/20858298/001ca266-b911-11e6-90d9-ea7d2eb02e3b.gif' width='800'></img>
+
 
 
 ### Travis and Appveyor
