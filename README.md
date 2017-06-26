@@ -28,8 +28,6 @@ For testing syntax_test files, go directly to [testing syntax_test files](README
 
 ## Running Tests
 
-### Local machine
-
 UnitTesting can be triggered via the command palette command `UnitTesting`.
 Enter the package name in the input panel and hit enter, a console should pop
 up and the tests should be running. To run only tests in particular files,
@@ -38,15 +36,20 @@ wildcard to match the file names, `<Package name>:test*.py` is used in
 default.
 
 
-### Reload, Test and Coverage (*For Sublime Text 3*)
+You could run the command `UnitTesting: Test Current Project` to run the
+current project. The current project will be first reloaded (see next section)
+by UnitTesting and then the tests will be run.
+
+### Reloading package (*Sublime Text 3 only*)
 
 Sublime Text package developers may find themselves have to close and re-open
 the software multiple times when developing a package. The command
 `UnitTesting: Reload Current Project` would reload the current project so
 developers do not have to restart Sublime Text.
 
-You could run the command `UnitTesting: Test Current Project` to run the current project. 
-The current project will be first reloaded by UnitTesting and then the tests will be run.
+
+### Test Coverage (*Sublime Text 3 only*)
+
 Furthermore, it is also possible to check test
 coverage via [coverage](https://pypi.python.org/pypi/coverage). The corresponding command is
 `UnitTesting: Test Current Project with Coverage`.
@@ -145,19 +148,20 @@ To activate deferred testing on travis and appveyor. Add the file
 }
 ```
 
-### Async testing (*For Sublime Text 3*)
+### Async testing (*Sublime Text 3 only*)
 
 In default, the tests are running in the main thread and can block the
 graphic inference. Asychronized testing could be used if you need the
 interface to respond. 
 
 Async tests are usually slower than the sync tests because the interface takes
-time to repond but it is useful when there are blocking codes in the tests. A
+time to respond but it is useful when there are blocking codes in the tests. A
 example would be found in 
 [async](https://github.com/randy3k/UnitTesting-example/tree/async) branch. 
 
-It is known that async test does not work very well with coverage, and
-deferred testing usually performs better than async testing.
+However, it is known that async test does not work very well with coverage.
+In general, it is recommended to use deferred testing over async testing since there is
+no need to worry about race condition.
 
 
 To activate async testing on travis and appveyor. Add the file
@@ -176,7 +180,7 @@ Note:
 
 
 
-## Vagrant (**Outdated**)
+## Vagrant (*Outdated*)
 
 
 Debugging in travis-ci could be difficult. To mock the travis-ci environment
