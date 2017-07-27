@@ -19,6 +19,9 @@ matrix:
         - os: osx
           language: generic
           env: SUBLIME_TEXT_VERSION="3"
+          # use UNITTESTING_TAG to specific tag of UnitTesting
+          # env: SUBLIME_TEXT_VERSION="3" UNITTESTING_TAG="master"
+
 
 before_install:
     - curl -OL https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/travis.sh
