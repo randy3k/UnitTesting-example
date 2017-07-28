@@ -1,6 +1,7 @@
 env:
     global:
         - PACKAGE="UnitTesting-example" # Package name
+        - SUBLIME_TEXT_VERSION="3"
 
 # mutliple os matrix
 # https://docs.travis-ci.com/user/multi-os/#Python-example-(unsupported-languages)
@@ -8,17 +9,9 @@ matrix:
     include:
         - os: linux
           language: python
-          env: SUBLIME_TEXT_VERSION="2"
-        - os: linux
-          language: python
           python: 3.3
-          env: SUBLIME_TEXT_VERSION="3"
         - os: osx
           language: generic
-          env: SUBLIME_TEXT_VERSION="2"
-        - os: osx
-          language: generic
-          env: SUBLIME_TEXT_VERSION="3"
 
 before_install:
     - curl -OL https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/travis.sh
@@ -37,24 +30,18 @@ install:
 script:
     # run tests with test coverage report
     - sh travis.sh run_tests --coverage
-    # run tests without test coverage report
-    # - sh travis.sh run_tests
-    # testing syntax_test files
-    # - sh travis.sh run_syntax_tests
 
 after_success:
     # remove the following if `coveralls` is not needed
-    - if [ "$SUBLIME_TEXT_VERSION" == "3" ] && [ "$TRAVIS_OS_NAME" == "osx" ]; then
+    - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
             brew update;
             brew install python3;
             pip3 install python-coveralls;
       fi
-    - if [ "$SUBLIME_TEXT_VERSION" == "3" ] && [ "$TRAVIS_OS_NAME" == "linux" ]; then
+    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
             pip install python-coveralls;
       fi
-    - if [ "$SUBLIME_TEXT_VERSION" == "3" ]; then
-            coveralls;
-      fi
+    - coveralls;
 
 notifications:
     email: false
