@@ -15,3 +15,9 @@ test_script:
 
     # run tests with test coverage report
     - ps: .\appveyor.ps1 "run_tests" -coverage -verbose
+
+after_test:
+    - "SET PYTHON=C:\Python33"
+    - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+    - pip install codecov
+    - codecov
