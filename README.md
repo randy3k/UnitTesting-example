@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/randy3k/UnitTesting-example.svg?style=shield)](https://circleci.com/gh/randy3k/UnitTesting-example)
 [![Build Status](https://travis-ci.org/randy3k/UnitTesting-example.svg?branch=master)](https://travis-ci.org/randy3k/UnitTesting-example) 
-[![Build status](https://ci.appveyor.com/api/projects/status/9nnjlnj6tetbxuqd/branch/master?svg=true)](https://ci.appveyor.com/project/randy3k/unittesting-example/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/l8x5laog8rs2t4p6/branch/master?svg=true)](https://ci.appveyor.com/project/randy3k/unittesting-example/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/randy3k/UnitTesting-example/badge.svg?branch=master)](https://coveralls.io/github/randy3k/UnitTesting-example?branch=coverage)
 [![codecov](https://codecov.io/gh/randy3k/UnitTesting-example/branch/master/graph/badge.svg)](https://codecov.io/gh/randy3k/UnitTesting-example)
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=Randy%2ecs%2elai%40gmail%2ecom&amp;lc=US&amp;item_name=Package&amp;currency_code=USD&amp;bn=PP%2dDonationsBF%3apaypal%2ddonate%2dyellow%2esvg%3aNonHosted" title="Donate to this project using Paypal"><img src="https://img.shields.io/badge/paypal-donate-blue.svg" /></a>
