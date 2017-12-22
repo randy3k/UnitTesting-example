@@ -11,7 +11,7 @@
 ------------
 
 This is an simple example to use
-[UnitTesting](https://github.com/randy3k/UnitTesting) to test a Sublime Text
+[UnitTesting](https://github.com/SublimeText/UnitTesting) to test a Sublime Text
 package on continuous integration services such as
 [travis-ci](https://travis-ci.org) and [appveyor](http://www.appveyor.com).
 

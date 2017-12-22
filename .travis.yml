@@ -17,7 +17,7 @@ matrix:
 
 
 before_install:
-    - curl -OL https://raw.githubusercontent.com/randy3k/UnitTesting/master/sbin/travis.sh
+    - curl -OL https://raw.githubusercontent.com/SublimeText/UnitTesting/master/sbin/travis.sh
     # enable gui, see https://docs.travis-ci.com/user/gui-and-headless-browsers
     - if [ "$TRAVIS_OS_NAME" == "linux"  ]; then
             export DISPLAY=:99.0;
