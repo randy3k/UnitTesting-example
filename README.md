@@ -1,6 +1,6 @@
 # UnitTesting-example
 
-[![CircleCI](https://circleci.com/gh/randy3k/UnitTesting-example.svg?style=shield)](https://circleci.com/gh/randy3k/UnitTesting-example)
+[![CircleCI](https://circleci.com/gh/randy3k/UnitTesting-example/tree/master.svg?style=shield)](https://circleci.com/gh/randy3k/UnitTesting-example/tree/master)
 [![Build Status](https://travis-ci.org/randy3k/UnitTesting-example.svg?branch=master)](https://travis-ci.org/randy3k/UnitTesting-example) 
 [![Build status](https://ci.appveyor.com/api/projects/status/l8x5laog8rs2t4p6/branch/master?svg=true)](https://ci.appveyor.com/project/randy3k/unittesting-example/branch/master)
 [![Coverage Status](https://coveralls.io/repos/github/randy3k/UnitTesting-example/badge.svg?branch=master)](https://coveralls.io/github/randy3k/UnitTesting-example?branch=coverage)
