@@ -41,13 +41,9 @@ after_success:
     - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
             brew update;
             brew install python3;
-            pip3 install python-coveralls;
-            pip3 install codecov;
       fi
-    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-            pip install python-coveralls;
-            pip install codecov;
-      fi
+    - pip3 install python-coveralls;
+    - pip3 install codecov;
     - coveralls
     - codecov
 
