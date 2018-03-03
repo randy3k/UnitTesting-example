@@ -57,7 +57,7 @@ jobs:
           # testing syntax_test files
           # - sh travis.sh run_syntax_tests
       - run: |
-          brew install python3
+          brew install python || brew upgrade python
           pip3 install codecov
           codecov
 
