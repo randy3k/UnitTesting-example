@@ -40,7 +40,6 @@ after_success:
     # remove the following if `coveralls` is not needed
     - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
             brew update;
-            brew install python || brew upgrade python;
       fi
     - pip3 install python-coveralls;
     - pip3 install codecov;
