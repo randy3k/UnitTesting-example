@@ -33,14 +33,7 @@ script:
 
 after_success:
     # remove the following if `coveralls` is not needed
-    - if [ "$TRAVIS_OS_NAME" == "osx" ]; then
-            brew update;
-            brew install python3;
-            pip3 install python-coveralls;
-      fi
-    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-            pip install python-coveralls;
-      fi
+    - pip3 install python-coveralls;
     - coveralls;
 
 notifications:
