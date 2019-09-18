@@ -31,6 +31,7 @@ script:
     - sh travis.sh run_tests --coverage
     # testing syntax_test files
     # - sh travis.sh run_syntax_tests
+    # - sh travis.sh run_syntax_compatibility
 
 after_success:
     # remove the following if `coveralls` is not needed

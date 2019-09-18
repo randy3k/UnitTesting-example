@@ -15,6 +15,9 @@ test_script:
 
     # run tests with test coverage report
     - ps: .\appveyor.ps1 "run_tests" -coverage -verbose
+    # testing syntax_test files
+    # - ps: .\appveyor.ps1 "run_syntax_tests" -verbose
+    # - ps: .\appveyor.ps1 "run_syntax_compatibility" -verbose
 
 after_test:
     - "SET PYTHON=C:\\Python33"
