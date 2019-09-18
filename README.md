@@ -19,11 +19,11 @@ package on continuous integration services such as
 
 ## More examples
 
-- [Deferred testing](https://github.com/randy3k/UnitTesting-example/tree/deferred).
+- [GitSavvy](https://github.com/divmain/GitSavvy) for deferred tests
 
-- [Async testing](https://github.com/randy3k/UnitTesting-example/tree/async)
+- [EasyClangComplete](https://github.com/niosus/EasyClangComplete) for async tests
 
-- [Syntax testing](https://github.com/randy3k/UnitTesting-example/tree/syntax)
+- [Assembly 6809](https://github.com/dougmasten/sublime-assembly-6809) for syntax tests
 
 - [AlignTab](https://github.com/randy3k/AlignTab)
 
