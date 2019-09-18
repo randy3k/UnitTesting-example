@@ -3,18 +3,15 @@ version: 2
 jobs:
   build-linux:
     docker:
-      - image: circleci/python:3.3.6
+      - image: circleci/python
     environment:
       PACKAGE: "UnitTesting-example"  # Package name
       SUBLIME_TEXT_VERSION: "3"
     steps:
       - checkout
       - run: |
-          # https://discuss.circleci.com/t/circleci-failing-when-using-sudo-apt-get-update/29269/9
-          sudo sed -i '/jessie-backports/d' /etc/apt/sources.list
-          sudo sed -i '/jessie-updates/d' /etc/apt/sources.list
           sudo apt-get update
-          sudo apt-get install libglib2.0-0 libgtk-3-0 
+          sudo apt-get install libglib2.0-0 libgtk-3-0
       - run: curl -OL https://raw.githubusercontent.com/SublimeText/UnitTesting/master/sbin/circleci.sh
       - run: |
           export DISPLAY=:99.0
