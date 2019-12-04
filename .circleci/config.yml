@@ -3,17 +3,13 @@ version: 2
 jobs:
   build-linux:
     docker:
-      - image: circleci/python
+      - image: sublimetext/unittesting
     steps:
       - checkout
-      - run: |
-          sudo apt-get update
-          sudo apt-get install libglib2.0-0 libgtk-3-0
+      - run: sh -e /etc/init.d/xvfb start
       - run: curl -OL https://raw.githubusercontent.com/SublimeText/UnitTesting/master/sbin/circleci.sh
       - run: |
-          export DISPLAY=:99.0
-          Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-          PATH="$HOME/.local/bin:$PATH"
+          export PATH="$HOME/.local/bin:$PATH"
 
           # bootstrap the testing environment
           sh circleci.sh bootstrap
@@ -27,8 +23,10 @@ jobs:
           # testing syntax_test files
           # - sh travis.sh run_syntax_tests
       - run: |
-          sudo pip install codecov
+          apt-get install python3-pip -y
+          pip3 install codecov
           codecov
+
 
   build-macos:
     macos:
