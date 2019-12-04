@@ -18,7 +18,7 @@ services:
     - xvfb
 
 before_install:
-    - curl -OL https://raw.githubusercontent.com/SublimeText/UnitTesting/master/sbin/travis.sh
+    - curl -OL https://raw.githubusercontent.com/SublimeText/UnitTesting/ci/sbin/travis.sh
 
 install:
     # bootstrap the testing environment

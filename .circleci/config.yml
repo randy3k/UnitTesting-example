@@ -12,7 +12,7 @@ jobs:
       - run: |
           sudo apt-get update
           sudo apt-get install libglib2.0-0 libgtk-3-0
-      - run: curl -OL https://raw.githubusercontent.com/SublimeText/UnitTesting/master/sbin/circleci.sh
+      - run: curl -OL https://raw.githubusercontent.com/SublimeText/UnitTesting/ci/sbin/circleci.sh
       - run: |
           export DISPLAY=:99.0
           Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
