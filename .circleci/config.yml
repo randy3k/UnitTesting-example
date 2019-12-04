@@ -4,9 +4,6 @@ jobs:
   build-linux:
     docker:
       - image: circleci/python
-    environment:
-      PACKAGE: "UnitTesting-example"  # Package name
-      SUBLIME_TEXT_VERSION: "3"
     steps:
       - checkout
       - run: |
@@ -36,9 +33,6 @@ jobs:
   build-macos:
     macos:
       xcode: "9.0"
-    environment:
-      PACKAGE: "UnitTesting-example"  # Package name
-      SUBLIME_TEXT_VERSION: "3"
     steps:
       - checkout
       - run: curl -OL https://raw.githubusercontent.com/SublimeText/UnitTesting/master/sbin/circleci.sh

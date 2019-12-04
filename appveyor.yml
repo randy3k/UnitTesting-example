@@ -1,8 +1,3 @@
-environment:
-    # The package name
-    PACKAGE: "UnitTesting-example"
-    SUBLIME_TEXT_VERSION : "3"
-
 install:
     - ps: appveyor DownloadFile "https://raw.githubusercontent.com/SublimeText/UnitTesting/master/sbin/appveyor.ps1"
     - ps: .\appveyor.ps1 "bootstrap" -verbose
