@@ -29,7 +29,7 @@ script:
 after_success:
 	# remove the following if `coveralls` is not needed
 	- pip3 install python-coveralls;
-	- pip3 install codecov;
+	- pip3 install coverage==4.5.4 codecov==2.0.15
 	- coveralls
 	- codecov
 
