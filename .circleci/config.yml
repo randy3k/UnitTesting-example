@@ -26,6 +26,7 @@ jobs:
           # testing syntax_test files
           # sh circleci.sh run_syntax_tests
       - run: |
+          apt-get update
           apt-get install python3-pip -y
           pip3 install coverage==4.5.4 codecov==2.0.15
           codecov
