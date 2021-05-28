@@ -57,32 +57,9 @@ jobs:
           pip3 install coverage==4.5.4 codecov==2.0.15
           codecov
 
-  build-windows:
-    executor: win/default
-    steps:
-      - checkout
-      - run: |
-          (new-object net.webclient).DownloadFile("https://raw.githubusercontent.com/SublimeText/UnitTesting/master/sbin/circleci.ps1","circleci.ps1")
-
-          # bootstrap the testing environment
-          ./circleci.ps1 "bootstrap" -verbose
-
-          # install Package Control and package denepdencies
-          ./circleci.ps1 "install_package_control" -verbose
-
-          # run tests with test coverage report
-          ./circleci.ps1 "run_tests" -coverage -verbose
-
-          # testing syntax_test files
-          # ./circleci.ps1 "run_syntax_tests" -verbose
-      - run: |
-          pip install coverage==4.5.4 codecov==2.0.15
-          codecov
-
 workflows:
   version: 2
   build_and_test:
     jobs:
       - build-linux
       - build-macos
-      - build-windows
