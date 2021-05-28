@@ -1,8 +1,5 @@
 version: 2.1  # make sure it is 2.1
 
-orbs:
-  win: circleci/windows@2.2.0
-
 jobs:
   build-linux:
     docker:
