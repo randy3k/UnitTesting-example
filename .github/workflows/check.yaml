@@ -1,0 +1,26 @@
+on: [push, pull_request]
+
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        st-version: [3, 4]
+        os: ["ubuntu-latest", "macOS-latest", "windows-latest"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: SublimeText/UnitTesting/actions/setup-unittesting@master
+        with:
+          sublime-text-version: ${{ matrix.st-version }}
+          unittesting-version: master  # for now
+      - uses: SublimeText/UnitTesting/actions/run-unittesting@master
+        with:
+          coverage: true
+      - name: upload coverage report
+        run: |
+          if [ -f "./.coverage" ]; then
+            pip3 install coverage==4.5.4 codecov==2.0.15
+            codecov
+          fi
+        shell: bash
