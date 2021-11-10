@@ -1,0 +1,5 @@
+# SYNTAX TEST "Packages/UnitTesting-example/foobar.sublime-syntax"
+
+hello world
+#<- word.hello
+#     ^^^^^ word.world

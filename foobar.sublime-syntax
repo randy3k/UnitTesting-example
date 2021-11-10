@@ -1,0 +1,23 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+file_extensions:
+  - foobar
+scope: source.foobar
+
+contexts:
+  comments:
+    - match: \#+
+      scope: punctuation.definition.comment.julia
+      push:
+        - meta_scope: comment.line.number-sign.julia
+        - match: (?=\n)
+          pop: true
+  main:
+    - include: comments
+
+    - match: hello
+      scope: word.hello
+
+    - match: world
+      scope: word.world
