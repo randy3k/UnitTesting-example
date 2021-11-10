@@ -12,11 +12,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v2
-      - uses: SublimeText/UnitTesting/actions/setup-unittesting@master
+      - uses: SublimeText/UnitTesting/actions/setup-unittesting@v1
         with:
           sublime-text-version: ${{ matrix.st-version }}
-          unittesting-version: master  # for now
-      - uses: SublimeText/UnitTesting/actions/run-unittesting@master
+      - uses: SublimeText/UnitTesting/actions/run-unittesting@v1
         with:
           coverage: true
       - run: |
